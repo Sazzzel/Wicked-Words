@@ -42,3 +42,55 @@
 * [Credits](#credits) 
 
 ---
+
+## User Experience (UX)  
+
+### **User Stories**
+
+### Primary Goal
+
+
+
+
+### **First Time Users**
+
+
+  
+
+### **Returning Users** 
+
+
+
+
+---
+
+# Creation Process  
+  
+### **1. Strategy** 
+
+
+
+
+### **2. Scope**  
+
+
+
+### **3. Structural**  
+
+
+
+
+### **4. Skeleton** 
+
+
+
+### Wireframes 
+
+   
+
+### **5. Surface**  
+
+ 
+
+---
+
