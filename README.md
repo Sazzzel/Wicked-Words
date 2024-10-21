@@ -94,3 +94,85 @@
 
 ---
 
+## Design  
+
+### **Color Scheme**
+
+
+### **Typography**
+ 
+
+### **Imagery** 
+
+
+---
+
+## Page Features 
+
+### **Navbar** 
+ 
+
+### **Hero Image**
+
+
+### **Footer**
+
+
+## Tablet & Mobile View  
+
+### **Hero Image**
+
+ 
+### **Desktop, Tablet & Mobile Differences** 
+ 
+
+
+### **Mobile View ** 
+
+
+
+## Future Features
+
+
+---
+
+### **Languages Used**   
+
+
+### **Frameworks, Libraries, Technologies & Programs Used** 
+
+
+---   
+
+## Testing  
+
+
+### Testing browsers
+
+
+### **HTML Validation using W3C Validation**
+
+
+### **CSS Validation using W3C Validation**
+
+
+
+### **Lighthouse scores via Chrome Developer Tools**
+
+ 
+---
+
+## Credits  
+
+
+
+  
+### **Content References**
+
+
+
+### **Acknowledgements**
+
+
+
+
