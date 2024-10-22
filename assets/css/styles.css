@@ -1,565 +1,124 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alice&family=Pirata+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Metal+Mania&family=Pirata+One&display=swap');
 
 
-body {
 
+:root {
+  --header-height: 60px;
+  --footer-height: 60px;
+  --primary-color: #ff6600;
+  --secondary-color: #000000;
+  --text-color: #ffffff;
+}
 
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Alice", serif;
-  /* added */
-  background-color: #000000;
-  /* added */
-  color: #f5f5f5;
-  /* added */
-
-  gap: px;
-
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-h1,
-h2,
-h3,
-h4 {
 
+h1, h2, h3, h4 {
   font-family: "Pirata One", system-ui;
-  letter-spacing: 5px;
-
-
+letter-spacing: 5px;
+ 
 }
-
-
-
-
-.container {
-
-  display: grid;
-
-  grid-template-areas:
-    "header header header"
-    "content content content"
-    "footer footer footer";
-
-  grid-template-columns: 200px 1fr 200px;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-
-  /* Uncomment if gaps needed between sections */
-
-
-
-
-  min-height: 100vh;
-
-}
-
-
-
-
-
-/* ------------------------------------------------------------------ Header Start */
-
-
 
 header {
-
-  text-align: center;
-
-  grid-area: header;
-  background-color: #282828;
-  /* added */
-  padding: 20px;
-  /* added */
-  box-shadow: 0 4px 8px rgba(0, 0, 0.5);
-  /* added */
-
-
-
-  background-color: rgb(246, 154, 0);
-}
-
-/* Navbar */
-
-
-.header-title {
-
-  font-size: 45px;
+  background-color: var(--primary-color);
+  height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  position: relative;
-  padding-right: 60px;
-  text-shadow: 2px 2px 8px #8b0000;
-  /* added */
-  color: #ff7518;
-  /* added */
-
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Pirata One", system-ui;
 
+ letter-spacing: 5px
+}
 
 nav {
-
-  grid-area: header;
-  height: 60px;
-  background-color: var(--color-1);
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
 }
-
-
-
-.links-container {
-
-  display: flex;
-  justify-content: flex-end;
-
-}
-
 
 nav a {
-  height: 100%;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
   color: var(--text-color);
+  text-decoration: none;
+  margin-left: 20px;
 }
 
-nav a:hover {
-  background-color: var(--accent-color);
+.menu-toggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  font-size: 24px; /* Hamburger icon size */
+
+  
+
 }
 
+nav a {
 
-nav svg {
-  fill: var(--text-color);
+font-family:'metal mania' ;
+
 }
 
-#sidebar-active {
-  display: none;
-}
-
-.open-sidebar-button,
-.close-sidebar-button {
-  display: none;
-}
-
-
-
-
-
-/* Header End*/
-
-
-
-
-
-
-
-
-/* Main Start */
 
 main {
-  text-align: center;
-
-  background-color: rgb(216, 202, 184);
-
-
-
-  grid-area: content;
-
-
-
-
-
-  /* Comment out if left and right side bar ARE needed,
-
-       OR 
-
-   Uncomment if left and right side bar are NOT needed
-     
-   Then go to media queries (800px and delete minimax:(75px,)) */
-
-
-  width: 100vw;
-  height: auto;
-
-
-
-
+  flex-grow: 1; /* Allow main to grow and fill space */
+  padding: 20px; /* Padding for main content */
+  margin-top: var(--header-height); /* Space for header */
+  margin-bottom: var(--footer-height); /* Space for footer */
 }
-
-
-
-
-/* Main End */
-
-
-
-
-
-
-
-/* Aside Start */
-
-
-.aside-left {
-  /* Comment out if not needed */
-
-  grid-area: nav;
-
-  text-align: center;
-
-  background-color: rgb(242, 234, 210);
-}
-
-.aside-right {
-
-  /* Comment out if not needed */
-
-  grid-area: side;
-
-  text-align: center;
-
-  background-color: rgb(242, 234, 210);
-}
-
-
-/* Aside End */
-
-
-
-
-
-
-/* Footer Start */
 
 footer {
-  grid-area: footer;
-  text-align: center;
-
-  background-color: rgb(152, 146, 130);
+  background-color: var(--primary-color);
+  height: var(--footer-height);
+  display: flex; /* Center content */
+  justify-content: center; /* Center content */
+  align-items: center; /* Center content */
 }
 
-
-#social-media-icons {
-
-  text-align: center;
-
-
-  display: flex;
-  justify-content: space-evenly;
-  list-style-type: none;
-  gap: 10px;
-
-}
-
-.footer-note {
-
-
-  margin-top: 0;
-  margin-bottom: 1rem;
-  margin-left: 2rem;
-  color: white;
-
-}
-
-
-/* Footer End */
-
-
-
-/* Canvas */
-
-canvas {
-  left: 0px;
-  top: 0px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: block;
-  margin: 0 auto;
-  background-color: black;
-  z-index: -10;
-}
-
-
-
-/* All Media Queries*/
-
-
-@media(max-width: 600px) {
-
-
-  .container {
-    grid-template-areas:
-      "header"
-
-      "content"
-
-      "footer";
-
-
-
-    grid-template-columns: 1fr;
-    grid-template-rows: auto
-      /* Header */
-      minmax(75px, auto)
-      /* Nav */
-      1fr
-      /* Content */
-
-      minmax(auto)
-      /* Sidebar */
-      auto;
+@media (max-width: 768px) {
+  
+  .menu-toggle {
+      display: block; /* Show menu toggle on mobile */
   }
 
-  nav,
-  aside {
-    margin: 0;
-  }
-
-  /* Navbar */
-
-
-  header {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .header-title {
-    margin: 0 auto;
-  }
-
-  nav {
-    width: 100%;
-  }
-
-
-
-
-
-  .links-container {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: fixed;
-    top: 0;
-    right: -50%;
-    /* Start off-screen */
-    z-index: 10;
-    width: 50%;
-    /* Cover half the screen */
-    height: 100vh;
-    background-color: rgba(221, 139, 139, 0.93);
-    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
-    transition: 0.75s ease-out;
-    padding-top: 60px;
-    /* Add space for close button */
-  }
-
-  nav a {
-    box-sizing: border-box;
-    height: auto;
-    width: 100%;
-    padding: 15px 20px;
-    justify-content: flex-start;
-  }
-
-
-  .open-sidebar-button {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    transform: translateY(20%);
-
-    z-index: 11;
-  }
-
-  .close-sidebar-button {
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    /* Position at the left end of the sidebar */
-    z-index: 11;
-  }
-
-
-  #sidebar-active:checked~.links-container {
-    right: 0;
-  }
-
-  #sidebar-active:checked~#overlay {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Add overlay background */
-  }
-
-
-}
-
-/* ------------------------------------------------------------------------ min-width: 601 px */
-@media(min-width: 601px) {
-
-  header {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .header-title {
-    margin: 0 auto;
-  }
-
-  nav {
-    width: 100%;
-  }
-
-
-
-}
-
-
-
-
-
-
-@media (max-width: 800px) {
-
-
-  .container {
-    grid-template-areas:
-      "header"
-
-      "content"
-
-      "footer";
-
-
-
-    grid-template-columns: 1fr;
-    grid-template-rows: auto
-      /* Header */
-      minmax(75px, auto)
-      /* Nav */
-      1fr
-      /* Content */
-
-      minmax(auto)
-      /* Sidebar */
-      auto;
-
-
-    /* Footer */
-
-
-  }
-
-  nav,
-  aside {
-    margin: 0;
-  }
-
-  /* Navbar */
-
-  .links-container {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: fixed;
-    top: 0;
-    right: -50%;
-    /* Start off-screen */
-    z-index: 10;
-    width: 50%;
-    /* Covers half of the screen */
-    height: 100vh;
-    background-color: rgba(221, 139, 139, 0.93);
-    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
-    transition: 0.75s ease-out;
-    padding-top: 60px;
-    /* Add space for close button */
-  }
-
-  nav a {
-    box-sizing: border-box;
-    height: auto;
-    width: 100%;
-    padding: 15px 20px;
-    justify-content: flex-start;
-  }
-
-  .open-sidebar-button {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    transform: translateY(20%);
-
-    z-index: 11;
-  }
-
-  .close-sidebar-button {
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    /* Position at the left end of the sidebar */
-    z-index: 11;
-  }
-
-  #sidebar-active:checked~.links-container {
-    right: 0;
-  }
-
-  #sidebar-active:checked~#overlay {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Add overlay background */
-  }
-
-
-
-}
-
-
-@media (max-width: 1050px) {
-
-
-  nav div a {
-
-    margin-right: auto;
-    align-content: flex-end;
-    justify-content: left;
-  }
-
-
-
-
-}
-
-
-@media (min-width: 1050px) {
-
-  .header-title {
-    padding-right: 35%;
-    /* Slightly less padding for medium-sized screens */
-  }
-
+ nav {
+      position: fixed; /* Position off-screen initially */
+      top: var(--header-height);
+      right: -200px; /* Start off-screen */
+      width: 200px; /* Width of the sidebar */
+      height: calc(100vh - var(--header-height)); /* Full height minus header */
+      background-color: var(--primary-color);
+      flex-direction: column; /* Stack links vertically */
+      transition: right 0.3s ease-in-out; /* Smooth slide effect */
+ }
+
+ nav.active {
+     right: 0; /* Slide in when active */
+ }
+
+ nav a {
+     margin: 20px; /* Space between links */
+ }
 }
