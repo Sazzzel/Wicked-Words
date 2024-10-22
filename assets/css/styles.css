@@ -1,12 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
 
 
 body {
+
+
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Alice", serif;
+  /* added */
+  background-color: #000000;
+  /* added */
+  color: #f5f5f5;
+  /* added */
 
+  gap: px;
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+
+  font-family: "Pirata One", system-ui;
+  letter-spacing: 5px;
 
 
 }
@@ -20,15 +39,16 @@ body {
 
   grid-template-areas:
     "header header header"
-    "nav content side"
+    "content content content"
     "footer footer footer";
 
   grid-template-columns: 200px 1fr 200px;
   grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 
   /* Uncomment if gaps needed between sections */
 
-  /* grid-gap: 10px; */
+
 
 
   min-height: 100vh;
@@ -39,7 +59,7 @@ body {
 
 
 
-/* ------------------------------------------------------------ Header Start */
+/* ------------------------------------------------------------------ Header Start */
 
 
 
@@ -48,12 +68,14 @@ header {
   text-align: center;
 
   grid-area: header;
+  background-color: #282828;
+  /* added */
+  padding: 20px;
+  /* added */
+  box-shadow: 0 4px 8px rgba(0, 0, 0.5);
+  /* added */
 
-  /* commented out to allow Header Title be placed in the center */
 
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
 
   background-color: rgb(246, 154, 0);
 }
@@ -62,14 +84,18 @@ header {
 
 
 .header-title {
-  
+
   font-size: 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   position: relative;
-  padding-right: 60px; 
+  padding-right: 60px;
+  text-shadow: 2px 2px 8px #8b0000;
+  /* added */
+  color: #ff7518;
+  /* added */
 
 }
 
@@ -91,7 +117,9 @@ nav {
 .links-container {
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; */ /*might remove */
+
+
 
 }
 
@@ -102,11 +130,15 @@ nav a {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--text-color);
+  color: #ff7518; /*added color*/
+  text-shadow: 1px 1px 6px #8b0000; /*added this*/
+  font-size: 20px; /*added this */
 }
 
 nav a:hover {
-  background-color: var(--accent-color);
+  /*background-color: var(--accent-color); /*removed */
+  color: #ff7518;
+  text-shadow: 2px 2px 10px #ff0000;
 }
 
 
@@ -123,7 +155,7 @@ nav svg {
   display: none;
 }
 
- 
+
 
 
 
@@ -141,18 +173,20 @@ nav svg {
 main {
   text-align: center;
 
-  background-color: rgb(216, 202, 184);
+  background-color: #1c1c1c; /*changed color*/
+  padding: 20px;
+  color: #f5f5f5;
+  font-size: 24px;
+  text-shadow: 1px 1px 5px #ff7518;
 
 
 
-
-  /* Comment out if left and right side bar ARE NOT needed
-     
-      OR 
-
-   Uncomment if left and right side bar ARE needed*/
-
+<<<<<<< HEAD
+ /*grid-area: content  ;*/ /*removed */
+=======
   grid-area: content;
+>>>>>>> main
+
 
 
 
@@ -166,8 +200,8 @@ main {
    Then go to media queries (800px and delete minimax:(75px,)) */
 
 
-  /* width: 100vw;
-  height: auto; */
+  width: 100vw; /* might remove */
+  height: auto;  /* might remove*/
 
 
 
@@ -188,10 +222,10 @@ main {
 /* Aside Start */
 
 
-.aside-left {
+/*.aside-left {
   /* Comment out if not needed */
 
-  grid-area: nav;
+  /*grid-area: nav;
 
   text-align: center;
 
@@ -202,7 +236,7 @@ main {
 
   /* Comment out if not needed */
 
-  grid-area: side;
+  /*grid-area: side;
 
   text-align: center;
 
@@ -211,6 +245,12 @@ main {
 
 
 /* Aside End */
+
+h1 {
+  font-size: 48px;
+  color: #ff7518;
+  text-shadow: 2px 2px 10px #8b0000;
+}
 
 
 
@@ -221,10 +261,45 @@ main {
 
 footer {
   grid-area: footer;
+  text-align: center; /* might take away*/
+  padding: 20px;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 5px #ff7518;
+  background-color: #282828;
+  box-shadow: 0 -4px 8px rgba(0,0,0,0.5);
+}
+
+/* added footer h1 */
+
+footer h1 {  
+  font-size: 40px;
+  color: #ff7518;
+  text-shadow: 2px 2px 8px #8b0000;
+}
+
+
+#social-media-icons {
+
   text-align: center;
 
-  background-color: rgb(152, 146, 130);
+
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  gap: 10px;
+
 }
+
+.footer-note {
+
+
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  color: white;
+
+}
+
 
 /* Footer End */
 
@@ -241,7 +316,7 @@ canvas {
   display: block;
   margin: 0 auto;
   background-color: black;
-  z-index: -10 ;
+  z-index: -10;
 }
 
 
@@ -255,9 +330,9 @@ canvas {
   .container {
     grid-template-areas:
       "header"
-      "nav"
+
       "content"
-      "side"
+
       "footer";
 
 
@@ -270,7 +345,7 @@ canvas {
       1fr
       /* Content */
 
-      minmax(75px, auto)
+      minmax(auto)
       /* Sidebar */
       auto;
   }
@@ -327,7 +402,7 @@ canvas {
     justify-content: flex-start;
   }
 
- 
+
   .open-sidebar-button {
     display: block;
     position: absolute;
@@ -342,7 +417,8 @@ canvas {
     display: block;
     position: absolute;
     top: 10px;
-    left: 10px; /* Position at the left end of the sidebar */
+    left: 10px;
+    /* Position at the left end of the sidebar */
     z-index: 11;
   }
 
@@ -365,7 +441,7 @@ canvas {
 
 }
 
-
+/* ------------------------------------------------------------------------ min-width: 601 px */
 @media(min-width: 601px) {
 
   header {
@@ -390,15 +466,15 @@ canvas {
 
 
 
-@media (max-width: 800px) { 
+@media (max-width: 800px) {
 
 
   .container {
     grid-template-areas:
       "header"
-      "nav"
+
       "content"
-      "side"
+
       "footer";
 
 
@@ -411,7 +487,7 @@ canvas {
       1fr
       /* Content */
 
-      minmax(75px, auto)
+      minmax(auto)
       /* Sidebar */
       auto;
 
@@ -469,9 +545,10 @@ canvas {
     display: block;
     position: absolute;
     top: 10px;
-    left: 10px; /* Position at the left end of the sidebar */
+    left: 10px;
+    /* Position at the left end of the sidebar */
     z-index: 11;
-  } 
+  }
 
   #sidebar-active:checked~.links-container {
     right: 0;
