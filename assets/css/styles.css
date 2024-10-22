@@ -27,11 +27,19 @@ body {
   flex-direction: column;
 }
 
+h1 {
+  font-size: 48px;
+  color: #ff7518;
+  text-shadow: 2px 2px 10px #8b0000;
+}
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "Pirata One", system-ui;
-letter-spacing: 5px;
- 
+  letter-spacing: 5px;
+
 }
 
 header {
@@ -53,7 +61,7 @@ header {
   font-weight: bold;
   font-family: "Pirata One", system-ui;
 
- letter-spacing: 5px
+  letter-spacing: 5px
 }
 
 nav {
@@ -64,61 +72,109 @@ nav a {
   color: var(--text-color);
   text-decoration: none;
   margin-left: 20px;
+
+  font-family: 'metal mania';
+
 }
 
 .menu-toggle {
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
   cursor: pointer;
-  font-size: 24px; /* Hamburger icon size */
-
-  
-
-}
-
-nav a {
-
-font-family:'metal mania' ;
+  font-size: 24px;
+  /* Hamburger icon size */
 
 }
+
 
 
 main {
-  flex-grow: 1; /* Allow main to grow and fill space */
-  padding: 20px; /* Padding for main content */
-  margin-top: var(--header-height); /* Space for header */
-  margin-bottom: var(--footer-height); /* Space for footer */
+
+  flex-grow: 1;
+  /* Allow main to grow and fill space */
+  padding: 20px;
+  /* Padding for main content */
+  margin-top: var(--header-height);
+  /* Space for header */
+  margin-bottom: var(--footer-height);
+  /* Space for footer */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Start */
+
 footer {
-  background-color: var(--primary-color);
-  height: var(--footer-height);
-  display: flex; /* Center content */
-  justify-content: center; /* Center content */
-  align-items: center; /* Center content */
+  grid-area: footer;
+  text-align: center;
+   
+  padding: 20px;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 5px #ff7518;
+  background-color: #282828;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+ 
+
+footer {
+
+  color: #ff7518;
+  text-shadow: 2px 2px 8px #8b0000;
+
 }
 
 @media (max-width: 768px) {
-  
+
   .menu-toggle {
-      display: block; /* Show menu toggle on mobile */
+    display: block;
+    /* Show menu toggle on mobile */
   }
 
- nav {
-      position: fixed; /* Position off-screen initially */
-      top: var(--header-height);
-      right: -200px; /* Start off-screen */
-      width: 200px; /* Width of the sidebar */
-      height: calc(100vh - var(--header-height)); /* Full height minus header */
-      background-color: var(--primary-color);
-      flex-direction: column; /* Stack links vertically */
-      transition: right 0.3s ease-in-out; /* Smooth slide effect */
- }
+  nav {
+    position: fixed;
+    /* Position off-screen initially */
+    top: var(--header-height);
+    right: -200px;
+    /* Start off-screen */
+    width: 200px;
+    /* Width of the sidebar */
+    height: calc(100vh - var(--header-height));
+    /* Full height minus header */
+    background-color: var(--primary-color);
+    flex-direction: column;
+    /* Stack links vertically */
+    transition: right 0.3s ease-in-out;
+    /* Smooth slide effect */
+  }
 
- nav.active {
-     right: 0; /* Slide in when active */
- }
+  nav.active {
+    right: 0;
+    /* Slide in when active */
+  }
 
- nav a {
-     margin: 20px; /* Space between links */
- }
+  nav a {
+    margin: 20px;
+    /* Space between links */
+  }
 }
