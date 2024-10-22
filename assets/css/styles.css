@@ -95,7 +95,7 @@ nav {
 .links-container {
 
   display: flex;
-  /*justify-content: flex-end; */ /*removed */
+  justify-content: flex-end; */ /*might remove */
 
 
 
