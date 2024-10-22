@@ -20,7 +20,7 @@ body {
 
   grid-template-areas:
     "header header header"
-    "nav content side"
+    "content content content"
     "footer footer footer";
 
   grid-template-columns: 200px 1fr 200px;
@@ -28,7 +28,7 @@ body {
 
   /* Uncomment if gaps needed between sections */
 
-  /* grid-gap: 10px; */
+
 
 
   min-height: 100vh;
@@ -39,7 +39,7 @@ body {
 
 
 
-/* ------------------------------------------------------------ Header Start */
+/* ------------------------------------------------------------------ Header Start */
 
 
 
@@ -49,11 +49,7 @@ header {
 
   grid-area: header;
 
-  /* commented out to allow Header Title be placed in the center */
 
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
 
   background-color: rgb(246, 154, 0);
 }
@@ -62,14 +58,14 @@ header {
 
 
 .header-title {
-  
+
   font-size: 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   position: relative;
-  padding-right: 60px; 
+  padding-right: 60px;
 
 }
 
@@ -123,7 +119,7 @@ nav svg {
   display: none;
 }
 
- 
+
 
 
 
@@ -145,14 +141,8 @@ main {
 
 
 
+ grid-area: content  ;
 
-  /* Comment out if left and right side bar ARE NOT needed
-     
-      OR 
-
-   Uncomment if left and right side bar ARE needed*/
-
-  grid-area: content;
 
 
 
@@ -166,8 +156,8 @@ main {
    Then go to media queries (800px and delete minimax:(75px,)) */
 
 
-  /* width: 100vw;
-  height: auto; */
+  width: 100vw;
+  height: auto;
 
 
 
@@ -241,7 +231,7 @@ canvas {
   display: block;
   margin: 0 auto;
   background-color: black;
-  z-index: -10 ;
+  z-index: -10;
 }
 
 
@@ -255,9 +245,9 @@ canvas {
   .container {
     grid-template-areas:
       "header"
-      "nav"
+      
       "content"
-      "side"
+     
       "footer";
 
 
@@ -270,7 +260,7 @@ canvas {
       1fr
       /* Content */
 
-      minmax(75px, auto)
+      minmax(auto)
       /* Sidebar */
       auto;
   }
@@ -327,7 +317,7 @@ canvas {
     justify-content: flex-start;
   }
 
- 
+
   .open-sidebar-button {
     display: block;
     position: absolute;
@@ -342,7 +332,8 @@ canvas {
     display: block;
     position: absolute;
     top: 10px;
-    left: 10px; /* Position at the left end of the sidebar */
+    left: 10px;
+    /* Position at the left end of the sidebar */
     z-index: 11;
   }
 
@@ -365,7 +356,7 @@ canvas {
 
 }
 
-
+/* ------------------------------------------------------------------------ min-width: 601 px */
 @media(min-width: 601px) {
 
   header {
@@ -390,15 +381,15 @@ canvas {
 
 
 
-@media (max-width: 800px) { 
+@media (max-width: 800px) {
 
 
   .container {
     grid-template-areas:
       "header"
-      "nav"
+       
       "content"
-      "side"
+       
       "footer";
 
 
@@ -411,7 +402,7 @@ canvas {
       1fr
       /* Content */
 
-      minmax(75px, auto)
+      minmax(auto)
       /* Sidebar */
       auto;
 
@@ -469,9 +460,10 @@ canvas {
     display: block;
     position: absolute;
     top: 10px;
-    left: 10px; /* Position at the left end of the sidebar */
+    left: 10px;
+    /* Position at the left end of the sidebar */
     z-index: 11;
-  } 
+  }
 
   #sidebar-active:checked~.links-container {
     right: 0;
