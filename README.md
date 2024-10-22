@@ -98,12 +98,31 @@ The game will play after the game mode and level have been selected.
 ### Wireframes 
 
 <details open>
-<summary>Wireframe - Homepage Mobile & Tablet</summary>  
+<summary>Wireframe - Mobile </summary>  
+
+![ wireframe - Mobile ](docs/Mobile%20View.png)
+
 
 
 </details> 
 
-   
+<details>
+<summary>Wireframe - Tablet </summary>  
+
+![ wireframe - Tablet ](docs/Ipad%20View.png)
+
+
+
+</details>    
+
+<details>
+<summary>Wireframe - Desktop </summary>  
+
+![ wireframe - Desktop ](docs/Desktop%20View.png)
+
+
+
+</details>    
 
 ### **5. Surface**  
 
