@@ -1,12 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
 
 
 body {
+
+
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Alice", serif;
+  /* added */
+  background-color: #000000;
+  /* added */
+  color: #f5f5f5;
+  /* added */
 
+  gap: px;
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+
+  font-family: "Pirata One", system-ui;
+  letter-spacing: 5px;
 
 
 }
@@ -25,6 +44,7 @@ body {
 
   grid-template-columns: 200px 1fr 200px;
   grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 
   /* Uncomment if gaps needed between sections */
 
@@ -48,6 +68,12 @@ header {
   text-align: center;
 
   grid-area: header;
+  background-color: #282828;
+  /* added */
+  padding: 20px;
+  /* added */
+  box-shadow: 0 4px 8px rgba(0, 0, 0.5);
+  /* added */
 
 
 
@@ -66,6 +92,10 @@ header {
   padding: 10px 20px;
   position: relative;
   padding-right: 60px;
+  text-shadow: 2px 2px 8px #8b0000;
+  /* added */
+  color: #ff7518;
+  /* added */
 
 }
 
@@ -141,7 +171,7 @@ main {
 
 
 
- grid-area: content  ;
+  grid-area: content;
 
 
 
@@ -216,6 +246,30 @@ footer {
   background-color: rgb(152, 146, 130);
 }
 
+
+#social-media-icons {
+
+  text-align: center;
+
+
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  gap: 10px;
+
+}
+
+.footer-note {
+
+
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  color: white;
+
+}
+
+
 /* Footer End */
 
 
@@ -245,9 +299,9 @@ canvas {
   .container {
     grid-template-areas:
       "header"
-      
+
       "content"
-     
+
       "footer";
 
 
@@ -387,9 +441,9 @@ canvas {
   .container {
     grid-template-areas:
       "header"
-       
+
       "content"
-       
+
       "footer";
 
 
