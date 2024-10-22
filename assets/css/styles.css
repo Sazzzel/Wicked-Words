@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+
+
+
+}
+
+
+
+
+.container {
+
+  display: grid;
+
+  grid-template-areas:
+    "header header header"
+    "nav content side"
+    "footer footer footer";
+
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+
+  /* Uncomment if gaps needed between sections */
+
+  /* grid-gap: 10px; */
+
+
+  min-height: 100vh;
+
+}
+
+
+
+
+
+/* ------------------------------------------------------------ Header Start */
+
+
+
+header {
+
+  text-align: center;
+
+  grid-area: header;
+
+  /* commented out to allow Header Title be placed in the center */
+
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+
+  background-color: rgb(246, 154, 0);
+}
+
+/* Navbar */
+
+
+.header-title {
+  
+  font-size: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+  padding-right: 60px; 
+
+}
+
+
+
+nav {
+
+  grid-area: header;
+  height: 60px;
+  background-color: var(--color-1);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+
+
+.links-container {
+
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+
+nav a {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+nav a:hover {
+  background-color: var(--accent-color);
+}
+
+
+nav svg {
+  fill: var(--text-color);
+}
+
+#sidebar-active {
+  display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button {
+  display: none;
+}
+
+ 
+
+
+
+/* Header End*/
+
+
+
+
+
+
+
+
+/* Main Start */
+
+main {
+  text-align: center;
+
+  background-color: rgb(216, 202, 184);
+
+
+
+
+  /* Comment out if left and right side bar ARE NOT needed
+     
+      OR 
+
+   Uncomment if left and right side bar ARE needed*/
+
+  grid-area: content;
+
+
+
+
+  /* Comment out if left and right side bar ARE needed,
+
+       OR 
+
+   Uncomment if left and right side bar are NOT needed
+     
+   Then go to media queries (800px and delete minimax:(75px,)) */
+
+
+  /* width: 100vw;
+  height: auto; */
+
+
+
+
+}
+
+
+
+
+/* Main End */
+
+
+
+
+
+
+
+/* Aside Start */
+
+
+.aside-left {
+  /* Comment out if not needed */
+
+  grid-area: nav;
+
+  text-align: center;
+
+  background-color: rgb(242, 234, 210);
+}
+
+.aside-right {
+
+  /* Comment out if not needed */
+
+  grid-area: side;
+
+  text-align: center;
+
+  background-color: rgb(242, 234, 210);
+}
+
+
+/* Aside End */
+
+
+
+
+
+
+/* Footer Start */
+
+footer {
+  grid-area: footer;
+  text-align: center;
+
+  background-color: rgb(152, 146, 130);
+}
+
+/* Footer End */
+
+
+
+
+
+
+
+
+
+/* All Media Queries*/
+
+
+@media(max-width: 600px) {
+
+
+  .container {
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "side"
+      "footer";
+
+
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto
+      /* Header */
+      minmax(75px, auto)
+      /* Nav */
+      1fr
+      /* Content */
+
+      minmax(75px, auto)
+      /* Sidebar */
+      auto;
+  }
+
+  nav,
+  aside {
+    margin: 0;
+  }
+
+  /* Navbar */
+
+
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .header-title {
+    margin: 0 auto;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+
+
+
+
+  .links-container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -50%;
+    /* Start off-screen */
+    z-index: 10;
+    width: 50%;
+    /* Cover half the screen */
+    height: 100vh;
+    background-color: rgba(221, 139, 139, 0.93);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease-out;
+    padding-top: 60px;
+    /* Add space for close button */
+  }
+
+  nav a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 15px 20px;
+    justify-content: flex-start;
+  }
+
+ 
+  .open-sidebar-button {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: translateY(20%);
+
+    z-index: 11;
+  }
+
+  .close-sidebar-button {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Position at the left end of the sidebar */
+    z-index: 11;
+  }
+
+
+  #sidebar-active:checked~.links-container {
+    right: 0;
+  }
+
+  #sidebar-active:checked~#overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Add overlay background */
+  }
+
+
+}
+
+
+@media(min-width: 601px) {
+
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .header-title {
+    margin: 0 auto;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+
+
+}
+
+
+
+
+
+
+@media (max-width: 800px) {
+
+
+
+  .container {
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "side"
+      "footer";
+
+
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto
+      /* Header */
+      minmax(75px, auto)
+      /* Nav */
+      1fr
+      /* Content */
+
+      minmax(75px, auto)
+      /* Sidebar */
+      auto;
+
+
+    /* Footer */
+
+
+  }
+
+  nav,
+  aside {
+    margin: 0;
+  }
+
+  /* Navbar */
+
+  .links-container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -50%;
+    /* Start off-screen */
+    z-index: 10;
+    width: 50%;
+    /* Covers half of the screen */
+    height: 100vh;
+    background-color: rgba(221, 139, 139, 0.93);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease-out;
+    padding-top: 60px;
+    /* Add space for close button */
+  }
+
+  nav a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 15px 20px;
+    justify-content: flex-start;
+  }
+
+  .open-sidebar-button {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: translateY(20%);
+
+    z-index: 11;
+  }
+
+  .close-sidebar-button {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Position at the left end of the sidebar */
+    z-index: 11;
+  } 
+
+  #sidebar-active:checked~.links-container {
+    right: 0;
+  }
+
+  #sidebar-active:checked~#overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Add overlay background */
+  }
+
+
+
+}
+
+
+@media (max-width: 1050px) {
+
+
+  nav div a {
+
+    margin-right: auto;
+    align-content: flex-end;
+    justify-content: left;
+  }
+
+
+
+
+}
+
+
+@media (min-width: 1050px) {
+
+  .header-title {
+    padding-right: 35%;
+    /* Slightly less padding for medium-sized screens */
+  }
+
+}
