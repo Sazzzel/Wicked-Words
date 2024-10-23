@@ -1,14 +1,12 @@
     import Sprite from './sprite.js';
-    let witch = new Sprite("../assets/images/witchSprite.png", 58, 46, 2, 20, 0, 0);
+    let witch = new Sprite("../assets/images/witchSprite.png", 58, 46, 2, 20);
     witch.setPosition(1920 / 2, 1080 /2 );
 
-    let bat = new Sprite("../assets/images/batSprite.png", 32, 32, 4, 20, 0, 0);
+    //let bat = new Sprite("../assets/images/batSprite.png", 32, 32, 4, 20);
     
-    let pumpkin = new Sprite("../assets/images/pumpkinSprite.png", 32, 64, 3, 20, 0, 0);
+    //let pumpkin = new Sprite("../assets/images/pumpkinSprite.png", 32, 64, 3, 20);
 
-    //let skeley = new Sprite("../assets/images/skeletonSprite.png", 32, 32, 3, 20, 0, 0);
-    
-    
+    let skeley = new Sprite("../assets/images/skeletonSprite.png", 92, 184, 3, 20, 0, 0,0.5);
 
     let canvas = document.getElementById('lests');
     let ctx = canvas.getContext('2d');
@@ -20,12 +18,14 @@
     let ballSize = 1;
     let castSpeed = 5;
     let score = 0;
+    let isPlaying = false;
 
-    monsters.push(bat);
-    //monsters.push(skeley);
-    monsters.push(pumpkin);
+   // monsters.push(bat);
+    monsters.push(skeley);
+    //monsters.push(pumpkin);
    
-    
+    console.log(skeley.image);
+    console.log(monsters);
 
      // move monsters towards witch
      function moveMonsters() {
@@ -37,8 +37,8 @@
             monsters[i].speed = baseSpeed / distance;
             
             monsters[i].x += (witch.x - monsters[i].x) * monsters[i].speed;
-            monsters[i].y += (witch.y - monsters[i].y) * monsters[i].speed;
-            monsters[i].update(ctx);
+            monsters[i].y += (witch.y - monsters[i].y) * monsters[i].speed;       
+            monsters[i].update();
             monsters[i].draw(ctx);
             if(distance < 10){
                 resetMonsters();
@@ -49,6 +49,8 @@
 
         }
     }
+
+    
 
 
     function spellCast(){
@@ -71,15 +73,22 @@
             monsters[i].y = witch.y + Math.sin(angle) * distance;
         }
     }
-
+    
 
     function gameLoop(){
-        ctx.fillRect(0, 0, 1920, 1080);
-        moveMonsters();
 
-        witch.update();
-        witch.draw(ctx);
-        spellCast();
+        ctx.fillStyle = "black";
+        ctx.fillRect(0, 0, 1920, 1080);
+        DrawBackdrop(ctx);
+        if(isPlaying){
+            moveMonsters();
+            witch.update();
+            witch.draw(ctx);
+            spellCast();
+        } 
+
+        
+        
         requestAnimationFrame(gameLoop);
     }
 
@@ -87,11 +96,17 @@
         document.getElementById("foot").style.display = "none";
         document.getElementById("main").style.display = "none";
         document.getElementById("head").style.display = "none";
-        gameLoop();
+        isPlaying = true;
+        
         
     }
+    
+    //play();
+    gameLoop();
+    
 
-   play();
+
+
 
 
     
