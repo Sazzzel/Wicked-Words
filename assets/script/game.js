@@ -1,12 +1,13 @@
     import Sprite from './sprite.js';
-    let witch = new Sprite("../assets/images/witchSprite.png", 58, 46, 2, 20, 0, 0, 2);
+    let assetsLoaded = 0;
+    let witch = new Sprite("../Wicked-Words/assets/images/witchSprite.png", 58, 46, 2, 20, 0, 0, 2);
     witch.setPosition(1920 / 2, 1080 /2 );
 
-    let bat = new Sprite("../assets/images/batSprite.png", 32, 32, 4, 20, 0, 0, 2.8);
+    let bat = new Sprite("../Wicked-Words/assets/images/batSprite.png", 32, 32, 4, 20, 0, 0, 2.8);
     
-    let pumpkin = new Sprite("../assets/images/pumpkinSprite.png", 32, 64, 3, 20, 0, 0, 1.8);
+    let pumpkin = new Sprite("../Wicked-Words/assets/images/pumpkinSprite.png", 32, 64, 3, 20, 0, 0, 1.8);
 
-    let skeley = new Sprite("../assets/images/skeletonSprite.png", 92, 184, 3, 20, 0, 0, 0.7);
+    let skeley = new Sprite("../Wicked-Words/assets/images/skeletonSprite.png", 92, 184, 3, 20, 0, 0, 0.7);
 
     let canvas = document.getElementById('lests');
     let ctx = canvas.getContext('2d');
@@ -33,9 +34,15 @@
             let baseSpeed =1;
             let distance = Math.sqrt((witch.x - monsters[i].x) * (witch.x - monsters[i].x) + (witch.y - monsters[i].y) * (witch.y - monsters[i].y));
             monsters[i].speed = baseSpeed / distance;
-            
-            monsters[i].x += (witch.x - monsters[i].x) * monsters[i].speed;
-            monsters[i].y += (witch.y - monsters[i].y) * monsters[i].speed;       
+            const xVel =  (witch.x - monsters[i].x) * monsters[i].speed;
+            const yVel = (witch.y - monsters[i].y) * monsters[i].speed;
+
+            let dir =  Math.abs(yVel)  > Math.abs(xVel) ? (yVel > 0 ? 0 : 2) : (xVel > 0 ? 1 : 3);
+        
+            //dir = yVel  > 0 ? 0 : 2
+            monsters[i].yFrame = dir;
+            monsters[i].x += xVel;
+            monsters[i].y += yVel;  
             monsters[i].update();
             monsters[i].draw(ctx);
             if(distance < 10){
@@ -98,17 +105,15 @@
         document.getElementById("main").style.display = "none";
         document.getElementById("header").style.display = "none";
         document.querySelector('.modal-backdrop').style.display = "none";
+        document.querySelector('#puzzle').style.display = "block";
+        resetMonsters();
         isPlaying = true;
         
         
     }
-    if (isPlaying === true){
-        play();
-
-    }
+   
     gameLoop();
     
-
 
 
 
