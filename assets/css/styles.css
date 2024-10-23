@@ -122,82 +122,10 @@ nav a {
 
 /* ------------------------------------------------------------------ Main Section */
 
-main {
-
-  flex-grow: 1;
-  /* Allow main to grow and fill space */
-  padding: 20px;
-  color: #f5f5f5;
-  font-size: 24px;
-  text-shadow: 1px 1px 5px #ff7518;
-
-
-
-  grid-area: content;
-
-
-
-
-
-  /* Comment out if left and right side bar ARE needed,
-
-       OR 
-
-   Uncomment if left and right side bar are NOT needed
-     
-   Then go to media queries (800px and delete minimax:(75px,)) */
-
-
-  width: 100vw; /* might remove */
-  height: auto;  /* might remove*/
-
-
-
-
-}
-
 
 
 
 /* Main End */
-
-
-
-
-
-
-
-/* Aside Start */
-
-
-/*.aside-left {
-  /* Comment out if not needed */
-
-  /*grid-area: nav;
-
-  text-align: center;
-
-  background-color: rgb(242, 234, 210);
-}
-
-.aside-right {
-
-  /* Comment out if not needed */
-
-  /*grid-area: side;
-
-  text-align: center;
-
-  background-color: rgb(242, 234, 210);
-
-  margin-top: var(--header-height);
-
-  margin-bottom: var(--footer-height);
-  /* Space for footer 
-}*/
-
-
-
 
 
 .hero {
