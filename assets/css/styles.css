@@ -10,7 +10,7 @@ body {
   padding: 0;
   font-family: "Alice", serif;
   /* added */
-  background-color: #000000;
+  background-color: #1c1c1c; 
   /* added */
   color: #f5f5f5;
   /* added */
@@ -117,7 +117,7 @@ nav {
 .links-container {
 
   display: flex;
-  justify-content: flex-end; */ /*might remove */
+  justify-content: flex-end;  /*might remove */
 
 
 
@@ -173,7 +173,7 @@ nav svg {
 main {
   text-align: center;
 
-  background-color: #1c1c1c; /*changed color*/
+  /*changed color*/
   padding: 20px;
   color: #f5f5f5;
   font-size: 24px;
@@ -181,11 +181,7 @@ main {
 
 
 
-<<<<<<< HEAD
- /*grid-area: content  ;*/ /*removed */
-=======
   grid-area: content;
->>>>>>> main
 
 
 
@@ -315,7 +311,7 @@ canvas {
   height: 100%;
   display: block;
   margin: 0 auto;
-  background-color: black;
+  background-color: #1c1c1c; 
   z-index: -10;
 }
 
