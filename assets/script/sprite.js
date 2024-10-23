@@ -1,6 +1,6 @@
 // Sprite class
 export default class Sprite {
-    constructor(imageSrc, frameWidth, frameHeight, frames, frameDelay, x, y) {
+    constructor(imageSrc, frameWidth, frameHeight, frames, frameDelay, x = 0, y = 0, factor = 1) {
         this.image = new Image();
         this.image.src = imageSrc;
         this.frameWidth = frameWidth;
@@ -10,6 +10,7 @@ export default class Sprite {
         this.frameDelay = frameDelay;
         this.frameCount = 0;
         this.currentFrame = 0;
+        this.factor = factor;
         this.x = x;
         this.y = y;
         this.isReady = false; // Indicates if the image has loaded
@@ -57,8 +58,8 @@ export default class Sprite {
             this.frameHeight,
             this.x,
             this.y,
-            this.frameWidth,
-            this.frameHeight
+            this.frameWidth * this.factor,
+            this.frameHeight * this.factor
         );
     }
 
