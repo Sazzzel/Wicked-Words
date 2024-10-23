@@ -1,29 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wicked Words</title>
     <link rel="stylesheet" href="assets/css/styles.css"> <!-- Link to the CSS file -->
+
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon-64x64.png">
+
+
 </head>
+
+
+
 <body>
-    <header>
+
+    <canvas id="lests" width="1920" height="1080"></canvas>
+
+
+
+
+    <header id="header">
         <div class="logo"> Wicked Words</div>
         <div class="menu-toggle">☰</div>
         <nav>
             <a href="#">How To Play</a>
             <a href="#">About Us</a>
-             
+
         </nav>
     </header>
 
-    <main>
-        <h1>Welcome to Halloween Games</h1>
-        <p>Enjoy our spooky selection of games!</p>
+    <main id="main">
+
+
+        <section class="hero">
+            <div class="hero-bg"></div> <!-- Blurred background image -->
+            <div class="hero-content">
+
+
+
+
+
+
+                <img src="assets/images/Footer.webp" alt="Hero Image" class="main-hero">
+
+                <img src="assets/images/hero left side.webp" alt="Hero-Image-left" class=" left-hero">
+
+                <img src="assets/images/hero right side.webp" alt="Hero-Image-right" class="right-hero">
+
+
+            </div>
+        </section>
+
+
     </main>
 
-    <footer>
-        <p>&copy; 2023 Halloween Games. All rights reserved.</p>
+    <footer id="footer">
+
+
+
+        <footer>
+            <!-- Footer content -->
+
+            <h2>About us</h2>
+
+            <br>
+
+            <h3>Click on the faces <br> (Github Links)</h3>
+
+
+
+
+
+
+            <ul id="social-media-icons">
+
+                <li><a href="https://github.com/Sazzzel" target="_blank" rel="noopener"
+                        aria-label="Visit our twitter page (opens in a new tab)"><img
+                            src="assets/images/Sazzzels_head.webp" alt="Sazzzel's head"></a>
+
+                    <p class="footer-note">
+
+                        <a href="https://github.com/Sazzzel"><strong>Sazzzel/Sarah</strong></a>
+
+                    </p>
+
+                </li>
+
+
+                <li><a href="https://github.com/Cosh66" target="_blank" rel="noopener"
+                        aria-label="Visit our youtube page (opens in a new tab)"> <img
+                            src="assets/images/Yvonnes_head.webp" alt="Yvonne's Head"></a>
+                    <p class="footer-note">
+
+                        <a href="https://github.com/Sazzzel"><strong>Yvonne </strong></a>
+
+
+                    </p>
+
+                </li>
+
+
+                <li><a href="https://github.com/m-dixon5" target="_blank" rel="noopener"
+                        aria-label="Visit our instagram page (opens in a new tab)"><img
+                            src="assets/images/Matts_Head.webp" alt="Matt's Head" style="height: 77px ;"></a>
+                    <p class="footer-note">
+                        <a href="https://github.com/Sazzzel"><strong>Matt </strong></a>
+
+
+                    </p>
+
+                </li>
+
+                <li><a href="https://github.com/Yazhmd" target="_blank" rel="noopener"
+                        aria-label="Visit our github page (opens in a new tab)"><img
+                            src="assets/images/Yazdans_Head.webp" style="height: 79px ;"> </a>
+
+                    <p class="footer-note">
+
+                        <a href="https://github.com/Sazzzel"><strong> Yazdan</strong></a>
+
+
+
+                    </p>
+                </li>
+
+            </ul>
+
+
+
+            <p class="footer-note">
+
+
+
+
+            </p>
+
+
+
+
+        </footer>
+
+
+
+        <strong>© The Four Horsemen All
+            rights
+            reserved</strong>
+
+
     </footer>
 
     <script>
@@ -32,7 +157,19 @@
 
         menuToggle.addEventListener('click', () => {
             nav.classList.toggle('active');
+
+
+
         });
     </script>
+
+    <script src="./assets/script/words.js"></script>
+    <script type="module" src="./assets/script/game.js"></script>
+
+
 </body>
+
+
+
+
 </html>
