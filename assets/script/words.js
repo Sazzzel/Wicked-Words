@@ -29,7 +29,7 @@ const words = [
     "wolf",
     "fear",
     "moth",
-    "bats",
+    "monsters",
     "dusk",
     "gory",
     "cree",
@@ -73,7 +73,7 @@ const words = [
     "spider",
     "spooky",
     "goblin",
-    "wizard",
+    "witch",
     "cobweb",
     "dagger",
     "jackal",
@@ -125,11 +125,12 @@ const words = [
   ],
 ];
 
-let level = 0;
+let level = 1;
 let puzzle = null;
+let gameType = "scramble";
 
 function newWord(){
-    puzzle= words[Math.floor(level - 1)][Math.floor(Math.random() * words.length)];
+    puzzle= words[Math.floor(level - 1)][Math.floor(Math.random() * words[Math.floor(level - 1)].length)];
       let shuffle = puzzle;
     if(gameType === 'scramble'){
        shuffle =  puzzle.split('').sort(function(){return 0.5-Math.random()}).join('');
