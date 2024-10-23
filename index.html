@@ -2,128 +2,172 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wicked Words</title>
+    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Link to the CSS file -->
 
-  <!-- meta name tags for search engines -->
-  <meta name="description" content="" />
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon-64x64.png">
 
-  <meta name="keywords" content="" />
 
-  <title>Wicked Words</title>
-
-  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
+
+
 
 <body>
 
-  <canvas id="lests" width="1920" height="1080"></canvas>
+    <canvas id="lests" width="1920" height="1080"></canvas>
 
 
-  <div class="container">
-    <header>
-      <!-- Header content -->
-
-      <nav>
-        <h1 class="header-title">Header</h1>
-
-        <input type="checkbox" id="sidebar-active" />
-        <label for="sidebar-active" class="open-sidebar-button">
-          <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">
-            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-          </svg>
-        </label>
-        <label id="overlay" for="sidebar-active"></label>
-        <div class="links-container">
-          <label for="sidebar-active" class="close-sidebar-button">
-            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
-              <path
-                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-            </svg>
-          </label>
 
 
-          <a href="index.html">Home</a>
-          <a href="about.html">How To Play</a>
-          <a href="products.html">About Us</a>
+    <header id="header">
+        <div class="logo"> Wicked Words</div>
+        <div class="menu-toggle">☰</div>
+        <nav>
+            <a href="#">How To Play</a>
+            <a href="#">About Us</a>
 
-          <a href="login.html"></a>
-
-        </div>
-      </nav>
+        </nav>
     </header>
 
-    <main>
-      <!-- Main content -->
-      <h1>Main Content</h1>
+    <main id="main">
+
+
+        <section class="hero">
+            <div class="hero-bg"></div> <!-- Blurred background image -->
+            <div class="hero-content">
+
+
+
+
+
+
+                <img src="assets/images/Footer.webp" alt="Hero Image" class="main-hero">
+
+                <img src="assets/images/hero left side.webp" alt="Hero-Image-left" class=" left-hero">
+
+                <img src="assets/images/hero right side.webp" alt="Hero-Image-right" class="right-hero">
+
+
+            </div>
+        </section>
+
+
     </main>
 
+    <footer id="footer">
 
 
 
-    <footer>
-      <!-- Footer content -->
-      <h1>Footer</h1>
+        <footer>
+            <!-- Footer content -->
 
-      <ul id="social-media-icons">
+            <h2>About us</h2>
 
-        <li><a href="https://github.com/Sazzzel" target="_blank" rel="noopener"
-            aria-label="Visit our twitter page (opens in a new tab)"><img src="assets/images/Sazzzel's head.webp"
-              alt="Sazzzel's head"></a>
-            
-              <p>Sazzzel/Sarah</p>
+            <br>
 
-            </li>
+            <h3>Click on the faces <br> (Github Links)</h3>
 
 
-        <li><a href="https://github.com/Cosh66" target="_blank" rel="noopener"
-            aria-label="Visit our youtube page (opens in a new tab)"> <img src="assets/images/Yvonne's head.webp"
-              alt="Yvonne's Head"></a>
-              <p>Yvonne</p>
-            
-            </li>
 
 
-        <li><a href="https://github.com/m-dixon5" target="_blank" rel="noopener"
-            aria-label="Visit our instagram page (opens in a new tab)"><img src="assets/images/Matt's Head.webp"
-              alt="Matt's Head" style="height: 77px ;"></a>
-          <p>Matt</p>
 
-        </li>
 
-        <li><a href="https://github.com/Yazhmd" target="_blank" rel="noopener"
-            aria-label="Visit our github page (opens in a new tab)"><img src="assets/images/Yazdan's Head.webp"
-              style="height: 79px ;"> </a>
+            <ul id="social-media-icons">
 
-          <p>Yazdan</p>
-        </li>
+                <li><a href="https://github.com/Sazzzel" target="_blank" rel="noopener"
+                        aria-label="Visit our twitter page (opens in a new tab)"><img
+                            src="assets/images/Sazzzels_head.webp" alt="Sazzzel's head"></a>
 
-      </ul>
+                    <p class="footer-note">
 
-      <p class="footer-note" style="  margin-top: 0;  margin-bottom: 1rem; margin-left: 2rem; color: white;">
-        
-        
+                        <a href="https://github.com/Sazzzel"><strong>Sazzzel/Sarah</strong></a>
+
+                    </p>
+
+                </li>
+
+
+                <li><a href="https://github.com/Cosh66" target="_blank" rel="noopener"
+                        aria-label="Visit our youtube page (opens in a new tab)"> <img
+                            src="assets/images/Yvonnes_head.webp" alt="Yvonne's Head"></a>
+                    <p class="footer-note">
+
+                        <a href="https://github.com/Sazzzel"><strong>Yvonne </strong></a>
+
+
+                    </p>
+
+                </li>
+
+
+                <li><a href="https://github.com/m-dixon5" target="_blank" rel="noopener"
+                        aria-label="Visit our instagram page (opens in a new tab)"><img
+                            src="assets/images/Matts_Head.webp" alt="Matt's Head" style="height: 77px ;"></a>
+                    <p class="footer-note">
+                        <a href="https://github.com/Sazzzel"><strong>Matt </strong></a>
+
+
+                    </p>
+
+                </li>
+
+                <li><a href="https://github.com/Yazhmd" target="_blank" rel="noopener"
+                        aria-label="Visit our github page (opens in a new tab)"><img
+                            src="assets/images/Yazdans_Head.webp" style="height: 79px ;"> </a>
+
+                    <p class="footer-note">
+
+                        <a href="https://github.com/Sazzzel"><strong> Yazdan</strong></a>
+
+
+
+                    </p>
+                </li>
+
+            </ul>
+
+
+
+            <p class="footer-note">
+
+
+
+
+            </p>
+
+
+
+
+        </footer>
+
+
+
         <strong>© The Four Horsemen All
-          rights
-          reserved</strong></p>
+            rights
+            reserved</strong>
 
 
     </footer>
 
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
 
-  </div>
-
-  <script></script>
-
-  <script src="https://kit.fontawesome.com/b29eabad9a.js" crossorigin="anonymous"></script>
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+          });
+      </script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
+  <script src="./assets/script/words.js"></script>
+  <script type="module" src="./assets/script/game.js"></script>
+
+
 </body>
-
-
 
 
 

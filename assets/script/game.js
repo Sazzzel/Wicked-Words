@@ -22,7 +22,7 @@
     let score = 0;
 
     monsters.push(bat);
-    monsters.push(skeley);
+    //monsters.push(skeley);
     monsters.push(pumpkin);
    
     
