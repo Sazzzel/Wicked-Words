@@ -127,7 +127,8 @@ const words = [
 
 let level = 1;
 let puzzle = null;
-let gameType = "scramble";
+let gameType;
+
 
 function newWord(){
     puzzle= words[Math.floor(level - 1)][Math.floor(Math.random() * words[Math.floor(level - 1)].length)];

@@ -1,12 +1,12 @@
     import Sprite from './sprite.js';
-    let witch = new Sprite("../assets/images/witchSprite.png", 58, 46, 2, 20);
+    let witch = new Sprite("../assets/images/witchSprite.png", 58, 46, 2, 20, 0, 0, 2);
     witch.setPosition(1920 / 2, 1080 /2 );
 
-    //let bat = new Sprite("../assets/images/batSprite.png", 32, 32, 4, 20);
+    let bat = new Sprite("../assets/images/batSprite.png", 32, 32, 4, 20, 0, 0, 2.8);
     
-    //let pumpkin = new Sprite("../assets/images/pumpkinSprite.png", 32, 64, 3, 20);
+    let pumpkin = new Sprite("../assets/images/pumpkinSprite.png", 32, 64, 3, 20, 0, 0, 1.8);
 
-    let skeley = new Sprite("../assets/images/skeletonSprite.png", 92, 184, 3, 20, 0, 0,0.5);
+    let skeley = new Sprite("../assets/images/skeletonSprite.png", 92, 184, 3, 20, 0, 0, 0.7);
 
     let canvas = document.getElementById('lests');
     let ctx = canvas.getContext('2d');
@@ -20,12 +20,10 @@
     let score = 0;
     let isPlaying = false;
 
-   // monsters.push(bat);
+    monsters.push(bat);
     monsters.push(skeley);
-    //monsters.push(pumpkin);
+    monsters.push(pumpkin);
    
-    console.log(skeley.image);
-    console.log(monsters);
 
      // move monsters towards witch
      function moveMonsters() {
@@ -92,16 +90,22 @@
         requestAnimationFrame(gameLoop);
     }
 
+    let start = document.querySelector('.modal-start-game').addEventListener('click' , play);
+    
+
     function play () {
-        document.getElementById("foot").style.display = "none";
+        document.getElementById("footer").style.display = "none";
         document.getElementById("main").style.display = "none";
-        document.getElementById("head").style.display = "none";
+        document.getElementById("header").style.display = "none";
+        document.querySelector('.modal-backdrop').style.display = "none";
         isPlaying = true;
         
         
     }
-    
-    //play();
+    if (isPlaying === true){
+        play();
+
+    }
     gameLoop();
     
 
