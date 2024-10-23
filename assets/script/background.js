@@ -5,10 +5,12 @@ let scroll = 0;
 let scrollMax = 1920/2;
 let scrollSpeed = 0.2;
 let scrollDirection = true;
+
 backdrop.onload = function () {
     backdropReady = true;
 };
-backdrop.src = "../assets/images/graveBack.png";
+
+backdrop.src = "../Wicked-Words/assets/images/graveBack.png";
 function DrawBackdrop(ctx){
     if(!backdropReady) return;
 

@@ -129,7 +129,34 @@ let level = 1;
 let puzzle = null;
 let gameType;
 
+let normalMode = document.querySelector('.btn-outline-warning')
+let hardMode = document.querySelector('.btn-outline-danger')
 
+// Event listeners
+normalMode.addEventListener('click' , clickNormal);
+
+  function clickNormal(){
+   gameType = "unscrambled";
+  handleGameType();
+  newWord();
+}
+
+
+hardMode.addEventListener('click' , clickHard);
+
+  function clickHard(){
+   gameType = "scramble";
+  handleGameType();
+  newWord();
+}
+
+function handleGameType(){
+
+
+
+  return gameType;
+}
+  gameType =  handleGameType();
 
 function newWord(){
     puzzle= words[Math.floor(level - 1)][Math.floor(Math.random() * words[Math.floor(level - 1)].length)];
