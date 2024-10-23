@@ -37,13 +37,35 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Pirata One", system-ui;
+  font-family: "metal mania", system-ui;
   letter-spacing: 5px;
 
 }
 
+
+canvas {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  background-color: black;
+  z-index: -10;
+
+}
+
+
+
+
+
+
+
+/* ---------------------------------------------------------- Header */
+
 header {
-  background-color: var(--primary-color);
+  background-color: rgba(168, 100, 37, 0.185)  ;
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
@@ -53,23 +75,34 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
-  font-family: "Pirata One", system-ui;
+  font-family: "metal mania", system-ui;
+
+    text-shadow: 2px 2px 8px #8b0000;
+
 
   letter-spacing: 5px
+
+ 
 }
+
+
+/* ---------------------------------------------------- Navbar */
 
 nav {
   display: flex;
+
+
+
 }
 
 nav a {
-  color: var(--text-color);
+  color: orange;
   text-decoration: none;
   margin-left: 20px;
 
@@ -79,7 +112,7 @@ nav a {
 
 .menu-toggle {
   display: none;
-  /* Hidden by default */
+
   cursor: pointer;
   font-size: 24px;
   /* Hamburger icon size */
@@ -87,15 +120,16 @@ nav a {
 }
 
 
+/* ------------------------------------------------------------------ Main Section */
 
 main {
 
   flex-grow: 1;
   /* Allow main to grow and fill space */
   padding: 20px;
-  /* Padding for main content */
+
   margin-top: var(--header-height);
-  /* Space for header */
+
   margin-bottom: var(--footer-height);
   /* Space for footer */
 }
@@ -104,6 +138,79 @@ main {
 
 
 
+.hero {
+  position: relative;
+  height: 100vh;
+  /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Hide overflow of background */
+}
+
+/* Blurred background */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('background_image.jpg');
+  /* Background image */
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  /* Blurred background */
+  z-index: -1;
+  /* Behind the content */
+}
+
+/* Hero content (foreground) */
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Main hero image */
+.main-hero {
+  /* Adjust this size based on your hero image */
+  height: auto;
+
+  top: 50px;
+
+  z-index: 3;
+
+  position: relative;
+  /* Keeps it above the other images */
+}
+
+/* Left hero image */
+.left-hero {
+  position: absolute;
+  left: -50px;
+  /* Adjust the positioning as per your layout */
+  top: 50%;
+  transform: translateY(-50%);
+  /* Center vertically */
+  max-width: 150px;
+  z-index: 4;
+  border-radius: 10px;
+}
+
+/* Right hero image */
+.right-hero {
+  position: absolute;
+  right: -50px;
+  /* Adjust the positioning as per your layout */
+  top: 50%;
+  transform: translateY(-50%);
+  /* Center vertically */
+  max-width: 150px;
+  z-index: 4;
+  border-radius: 10px;
+}
 
 
 
@@ -120,14 +227,12 @@ main {
 
 
 
-
-
-/* Footer Start */
+/* ------------------------------------------------------------------------ Footer Start */
 
 footer {
   grid-area: footer;
   text-align: center;
-   
+
   padding: 20px;
   color: #f5f5f5;
   text-shadow: 1px 1px 5px #ff7518;
@@ -135,7 +240,7 @@ footer {
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
 }
 
- 
+
 
 footer {
 
@@ -144,37 +249,118 @@ footer {
 
 }
 
+ 
+ 
+ 
+ 
+
+
+#social-media-icons {
+
+  text-align: center;
+
+
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+}
+
+.footer-note {
+
+
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  color: white;
+
+}
+
+
+
+
+/* -------------------------------------------------------------- All Media Queries */
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
 
   .menu-toggle {
     display: block;
-    /* Show menu toggle on mobile */
+    /* Shows menu toggle on mobile */
   }
 
   nav {
     position: fixed;
-    /* Position off-screen initially */
+
     top: var(--header-height);
     right: -200px;
-    /* Start off-screen */
+
     width: 200px;
-    /* Width of the sidebar */
+
     height: calc(100vh - var(--header-height));
-    /* Full height minus header */
-    background-color: var(--primary-color);
+
+    background-color: rgba(205, 211, 205, 0.134);
     flex-direction: column;
-    /* Stack links vertically */
+
     transition: right 0.3s ease-in-out;
-    /* Smooth slide effect */
+
+    text-shadow: 2px 2px 8px #8b0000;
+
+
+
   }
 
   nav.active {
     right: 0;
-    /* Slide in when active */
+
   }
 
   nav a {
     margin: 20px;
-    /* Space between links */
+
   }
+
+
+  /* ----------------------------------------------------------  main hero image */
+
+  .main-hero {
+    height: 35svh;
+    /* Adjust this size based on your hero image */
+
+
+    top: 50px;
+
+    z-index: 3;
+
+    position: relative;
+    /* Keeps it above the other images */
+
+  }
+
+
+  .left-hero .right-hero {
+    max-width: 100px;
+
+    right: -30px;
+  }
+
+  .right-hero {
+
+    max-width: 100px;
+
+    right: -30px;
+
+
+  }
+
 }
