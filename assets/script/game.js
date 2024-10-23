@@ -1,23 +1,29 @@
+    /* jshint esversion: 6 */
     import Sprite from './sprite.js';
-    let assetsLoaded = 0;
-    let witch = new Sprite("../Wicked-Words/assets/images/witchSprite.png", 58, 46, 2, 20, 0, 0, 2);
+    const castBubble = new Image();
+    castBubble.src = "../assets/images/castBubble.png";
+    const lsModal = document.getElementById("landscapeModal");
+    // HTML Score Holder
+    // const SCORE_DIV = document.getElementById("score");
+
+    const witch = new Sprite("../assets/images/witchSprite.png", 58, 46, 2, 20, 0, 0, 2);
     witch.setPosition(1920 / 2, 1080 /2 );
 
-    let bat = new Sprite("../Wicked-Words/assets/images/batSprite.png", 32, 32, 4, 20, 0, 0, 2.8);
+    let bat = new Sprite("../assets/images/batSprite.png", 32, 32, 4, 20, 0, 0, 2.8);
     
-    let pumpkin = new Sprite("../Wicked-Words/assets/images/pumpkinSprite.png", 32, 64, 3, 20, 0, 0, 1.8);
+    let pumpkin = new Sprite("../assets/images/pumpkinSprite.png", 32, 64, 3, 20, 0, 0, 1.8);
 
-    let skeley = new Sprite("../Wicked-Words/assets/images/skeletonSprite.png", 92, 184, 3, 20, 0, 0, 0.7);
+    let skeley = new Sprite("../assets/images/skeletonSprite.png", 92, 184, 3, 20, 0, 0, 0.7);
 
     let canvas = document.getElementById('lests');
     let ctx = canvas.getContext('2d');
     let width = canvas.width;
     let height = canvas.height;
     let monsters = [];
-    let batCount = 10;
-    let cast = true;
+
+    let cast = false;
     let ballSize = 1;
-    let castSpeed = 5;
+    let castSpeed = 20;
     let score = 0;
     let isPlaying = false;
 
@@ -61,9 +67,11 @@
     function spellCast(){
         if (cast && ballSize < 2000) {
             ballSize += castSpeed;
-        } else {
+        } else if (cast) {
             ballSize = 0;
             cast = false;
+            resetMonsters();
+            newWord();
         }
         witch.yFrame = 0;
        if (ballSize > 0) witch.yFrame = 1;
@@ -78,10 +86,13 @@
             monsters[i].y = witch.y + Math.sin(angle) * distance;
         }
     }
-    
+
+
+
 
     function gameLoop(){
-
+        const mode =  window.innerWidth > window.innerHeight ? "none" : "block";
+        lsModal.style.display = mode;
         ctx.fillStyle = "black";
         ctx.fillRect(0, 0, 1920, 1080);
         DrawBackdrop(ctx);
@@ -89,7 +100,11 @@
             moveMonsters();
             witch.update();
             witch.draw(ctx);
+            ctx.drawImage(castBubble, (width / 2) - (ballSize / 2) , (height / 2) - (ballSize / 2), ballSize, ballSize);
             spellCast();
+            ctx.fillStyle = "white";
+            ctx.font = "30px Arial";
+            ctx.fillText("Score : " + score,50,50);
         } 
 
         
@@ -97,8 +112,7 @@
         requestAnimationFrame(gameLoop);
     }
 
-    let start = document.querySelector('.modal-start-game').addEventListener('click' , play);
-    
+
 
     function play () {
         document.getElementById("footer").style.display = "none";
@@ -106,13 +120,34 @@
         document.getElementById("header").style.display = "none";
         document.querySelector('.modal-backdrop').style.display = "none";
         document.querySelector('#puzzle').style.display = "block";
+        document.getElementById("answer").focus();
         resetMonsters();
         isPlaying = true;
         
         
     }
-   
+    document.getElementById('answer').addEventListener('keyup', function(e){
+        
+        if(e.keyCode == 13){
+            if(document.getElementById('answer').value == puzzle){
+                cast = true;
+
+              
+                document.getElementById('answer').value = '';   
+                score+= gameType == "shuffle" ?  20 : 5;
+                level = Math.floor(score / 100) + 1;
+                level = level > 6 ? 6 : level;
+                // SCORE_DIV.innerHTML = "Score :" + score;
+            }
+        }
+
+        // update score
+        
+    
+    });
     gameLoop();
+   document.querySelector('.modal-start-game').addEventListener('click' , play);
+    
     
 
 
