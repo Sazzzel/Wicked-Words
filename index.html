@@ -5,9 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wicked Words</title>
-    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Link to the CSS file -->
+
+    <!-- Bootstrap  -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- style css -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+
+
+
 
     <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon-64x64.png">
+
+
 
 
 </head>
@@ -35,7 +47,8 @@
 
 
         <section class="hero">
-            <div class="hero-bg"></div> <!-- Blurred background image -->
+            <div class="hero-bg"> </div> <!-- Blurred background image -->
+
             <div class="hero-content">
 
 
@@ -52,6 +65,90 @@
 
             </div>
         </section>
+
+
+
+        <!-- Modal Button -->
+
+        <button type="button" class="btn btn-dark play-btn" data-toggle="modal" data-target="#exampleModalCenter">
+
+            Play Game
+
+        </button>
+
+        <!-- Modal Vertical Pop-up -->
+
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered" role="document">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+
+
+                        <h5 class="modal-title">
+
+                            Select Game Mode
+
+                        </h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                        </button>
+
+
+                    </div>
+                    <div class="modal-body ">
+
+                        <p> </p>
+
+                        <div class="d-flex justify-content-around   ">
+
+                            <div>
+                                <button type="button" class="btn btn-game-normal btn-outline-warning">Spooky Mode
+                                </button>
+
+                                <p class="modal-btn-text">(Normal Mode)</p>
+                            </div>
+
+
+
+                            <div>
+
+                                <button type="button" class="btn   btn-game-hard    btn-outline-danger">Haunted
+                                    Mode</button>
+                                <p class="modal-btn-text">(Hard Mode)</p>
+                            </div>
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="modal-footer">
+
+
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+
+                        <button type="button" class="   btn  modal-start-game ">Start Game</button>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
 
 
     </main>
@@ -130,23 +227,23 @@
 
 
 
-            <p class="footer-note">
 
-
-
-
-            </p>
 
 
 
 
         </footer>
 
+        <p class="footer-note">
 
 
-        <strong>© The Four Horsemen All
-            rights
-            reserved</strong>
+            <strong>© The Four Horsemen All
+                rights
+                reserved</strong>
+
+
+
+        </p>
 
 
     </footer>
@@ -157,14 +254,20 @@
 
         menuToggle.addEventListener('click', () => {
             nav.classList.toggle('active');
-          });
-      </script>
+        });
+    </script>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="./assets/script/words.js"></script>
-  <script type="module" src="./assets/script/game.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assets/script/words.js"></script>
+
+    <script src="./assets/script/background.js"></script>
+
+    <script type="module" src="./assets/script/game.js"></script>
 
 
 </body>
