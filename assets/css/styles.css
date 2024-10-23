@@ -123,20 +123,15 @@ nav a {
 /* ------------------------------------------------------------------ Main Section */
 
 
-main {
-
-  flex-grow: 1;
-  /* Allow main to grow and fill space */
-  padding: 20px;
-
-  margin-top: var(--header-height);
-
-  margin-bottom: var(--footer-height);
-  /* Space for footer */
-}
 
 
 
+
+
+
+
+
+/* Main End */
 
 /* ---------------------------------------------- hero image */
 .hero {
