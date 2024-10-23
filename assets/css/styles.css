@@ -6,7 +6,10 @@
 
 :root {
   --header-height: 100px;
+
   --footer-height: 60px;
+
+  
   --primary-color: #ff6600;
   --secondary-color: #000000;
   --text-color: #ffffff;
@@ -30,6 +33,7 @@ body {
   text-decoration: none;
 
 }
+
 
 h1 {
   font-size: 48px;
@@ -62,7 +66,10 @@ canvas {
 
 }
 
-
+ 
+html {
+  scroll-behavior: smooth;
+}
 
 a {
   color: #ff7518;
@@ -70,7 +77,7 @@ a {
 }
 
 a:hover {
-  color: #8b0000;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -84,7 +91,7 @@ a:active {
 /* ---------------------------------------------------------- Header */
 
 header {
-  background-color: rgba(168, 100, 37, 0.185);
+  background-color: rgba(0, 0, 0, 0.5);
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
@@ -151,7 +158,7 @@ nav a {
 
 nav a:hover {
 
-  background-color: #161515;
+
   color: #ffffff;
 
 
@@ -180,12 +187,8 @@ main {
 
   flex-grow: 1;
   /* Allow main to grow and fill space */
-  padding: 20px;
-
-  margin-top: var(--header-height);
-
-  margin-bottom: var(--footer-height);
-  /* Space for footer */
+  
+  
 }
 
 
@@ -203,6 +206,9 @@ main {
   align-items: center;
   overflow: hidden;
   /* Hide overflow of background */
+
+  padding: 0;  
+  margin: 0;
 }
 
 /* Blurred background */
@@ -264,7 +270,7 @@ main {
 
   top: 50%;
   transform: translateY(-50%);
-
+ 
   max-width: 150px;
   z-index: 4;
   border-radius: 10px;
@@ -280,8 +286,8 @@ main {
 .play-btn {
   background-color: #ff7518;
   color: #000000;
-  font-size: 2rem;
-  font-family: 'Pirata One', cursive;
+  font-size: 2rem; 
+  font-family: 'metal mania', cursive;
   border-radius: 10px;
   padding: 10px 20px;
   text-shadow: 2px 2px 5px #8b0000;
@@ -290,6 +296,21 @@ main {
   letter-spacing: 4px;
 
   transition: background-color 0.3s ease;
+
+  z-index: 5;   
+
+ 
+
+  position: absolute; 
+
+/* Adjust its position */
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  
+ 
+
+
 }
 
 
@@ -439,7 +460,7 @@ main {
 
 .modal-start-game {
 
-
+ 
 
   color: #ff6600;
 
@@ -447,6 +468,34 @@ main {
 
 }
 
+
+
+
+/* --------------------------------------------------------------------------------- How to play section  */
+
+.how-to-play-section {
+  padding: 50px 20px;
+  background-color: #2b2a2a;
+  scroll-margin-top: 80px; /* Adjust based on your header height */
+}
+
+.how-to-play-content {
+  max-width: 800px;
+  margin: 0 auto;  
+}
+
+.how-to-play-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.how-to-play-section h3 {
+  margin-top: 20px;
+}
+
+.how-to-play-section ol, .how-to-play-section ul {
+  margin-left: 20px;
+}
 
 
 
@@ -473,10 +522,10 @@ main {
 
 /* ------------------------------------------------------------------------ Footer  */
 
-footer {
-  grid-area: footer;
+footer {   
+  
   text-align: center;
-
+ 
   padding: 20px;
   color: #f5f5f5;
   text-shadow: 1px 1px 5px #ff7518;
@@ -527,7 +576,7 @@ footer {
 
   letter-spacing: 2px;
 
-}
+} 
 
 
 
@@ -550,14 +599,14 @@ footer {
 
 
 
- 
+
 
 
 
 @media (max-width: 650px) {
 
 
-  .logo { 
+  .logo {
     margin: 0 auto;
   }
 
@@ -582,7 +631,7 @@ footer {
 
     height: calc(100vh - var(--header-height));
 
-    background-color: rgba(205, 211, 205, 0.134);
+    background-color: rgba(29, 29, 29, 0.801);
     flex-direction: column;
 
     transition: right 0.3s ease-in-out;
@@ -591,6 +640,16 @@ footer {
 
 
 
+  }
+
+
+ 
+  nav a:hover {
+
+background-color: grey; 
+    color: #ffffff;
+  
+  
   }
 
   nav.active {
@@ -660,29 +719,30 @@ footer {
 
   }
 
- 
+
 }
 
-     
+
+/* ---------------------------------------------------  min-width: 1050px*/
+
 @media (min-width: 1050px) {
-          
- 
-  .logo {      
-    margin: 100px;    
+
+
+  .logo {
+    margin: 100px;
   }
-  
+
   nav a {
 
-    
-      box-sizing: border-box;
-      height: auto; 
-       
-      padding: 15px 20px;
-      justify-content:space-between ;
-  
 
-  } 
+    box-sizing: border-box;
+    height: auto;
+
+    padding: 60px 60px;
+    justify-content: space-between;
+
+
+  }
 
 
 }
- 

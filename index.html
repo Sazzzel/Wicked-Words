@@ -34,23 +34,25 @@
 
 
     <header id="header">
-        
-        <div class="logo"> 
-            
-            <a href="index.html">  Wicked Words   </a>
+
+        <div class="logo">
+            <a href="index.html"> Wicked Words </a>
 
 
 
         </div>
-        
-        
+
+
         <div class="menu-toggle">☰</div>
         <nav>
-            <a href="#">How To Play</a>
-            <a href="#">About Us</a>
+
+
+            <a href="#" data-toggle="modal" data-target="#exampleModalCenter" >Play</a>
+            <a href="#how-to-play">How To Play</a>
+            <a href="#about-us">About Us</a>
 
         </nav>
-        
+
     </header>
 
     <main id="main">
@@ -63,6 +65,8 @@
 
 
 
+                <!-- Modal Button -->
+
 
 
 
@@ -73,6 +77,14 @@
                 <img src="assets/images/hero right side.webp" alt="Hero-Image-right" class="right-hero">
 
 
+                <button type="button" class="btn btn-dark play-btn" id="play-btn" data-toggle="modal"
+                    data-target="#exampleModalCenter">
+
+                    Play Game
+
+                </button>
+
+
             </div>
         </section>
 
@@ -80,11 +92,7 @@
 
         <!-- Modal Button -->
 
-        <button type="button" class="btn btn-dark play-btn" data-toggle="modal" data-target="#exampleModalCenter">
 
-            Play Game
-
-        </button>
 
         <!-- Modal Vertical Pop-up -->
 
@@ -174,7 +182,25 @@
 
         <!-- How To play section-->
 
-
+        <section id="how-to-play" class="how-to-play-section">
+            <h2>How to Play</h2>
+            <div class="how-to-play-content">
+                <h3>Game Rules</h3>
+                <ol>
+                    <li>Choose your game mode: Spooky Mode (Normal) or Haunted Mode (Hard).</li>
+                    <li>You'll be presented with a word puzzle to solve.</li>
+                    <li>In Spooky Mode, the words are unscrambled. In Haunted Mode, the words are scrambled.</li>
+                    <li>Type your answer in the input box provided.</li>
+                    <li>Solve the puzzle to cast a spell and progress in the game.</li>
+                </ol>
+                <h3>Tips</h3>
+                <ul>
+                    <li>Pay attention to the context and theme of the game for clues.</li>
+                    <li>In Haunted Mode, try rearranging the letters to form familiar words.</li>
+                    <li>Don't be afraid to use hints if you're stuck!</li>
+                </ul>
+            </div>
+        </section>
 
 
 
@@ -195,17 +221,17 @@
         <br>
         <br>
 
-        <p class="puzzle-text"  >Solve & Type In The Puzzle Word To Cast A Spell</p>
+        <p class="puzzle-text">Solve & Type In The Puzzle Word To Cast A Spell</p>
 
     </div>
-   
+
 
 
     <footer id="footer">
 
 
 
-        <footer>
+        <footer id="about-us">
             <!-- Footer content -->
 
             <h2>About us</h2>
@@ -221,7 +247,7 @@
 
             <ul id="social-media-icons">
 
-                <li class="footer-faces"  ><a href="https://github.com/Sazzzel" target="_blank" rel="noopener"
+                <li class="footer-faces"><a href="https://github.com/Sazzzel" target="_blank" rel="noopener"
                         aria-label="Visit our twitter page (opens in a new tab)"><img
                             src="assets/images/Sazzzels_head.webp" alt="Sazzzel's head"></a>
 
@@ -247,7 +273,7 @@
                 </li>
 
 
-                <li  class="footer-faces"    ><a href="https://github.com/m-dixon5" target="_blank" rel="noopener"
+                <li class="footer-faces"><a href="https://github.com/m-dixon5" target="_blank" rel="noopener"
                         aria-label="Visit our instagram page (opens in a new tab)"><img
                             src="assets/images/Matts_Head.webp" alt="Matt's Head" style="height: 77px ;"></a>
                     <p class="footer-note">
@@ -258,7 +284,7 @@
 
                 </li>
 
-                <li class="footer-faces" ><a href="https://github.com/Yazhmd" target="_blank" rel="noopener"
+                <li class="footer-faces"><a href="https://github.com/Yazhmd" target="_blank" rel="noopener"
                         aria-label="Visit our github page (opens in a new tab)"><img
                             src="assets/images/Yazdans_Head.webp" style="height: 79px ;"> </a>
 
@@ -316,6 +342,31 @@
     <script src="./assets/script/background.js"></script>
 
     <script type="module" src="./assets/script/game.js"></script>
+
+
+ 
+
+
+<script>
+    function checkOrientation() {
+        if (window.innerHeight > window.innerWidth) {
+            // Device is in portrait mode
+            document.querySelector('.landscape-message').style.display = 'block';
+        } else {
+            // Device is in landscape mode
+            document.querySelector('.landscape-message').style.display = 'none';
+        }
+    }
+
+    // Check the orientation on page load
+    window.addEventListener('load', checkOrientation);
+
+    // Detect orientation change
+    window.addEventListener('resize', checkOrientation);
+</script>
+
+
+ 
 
 
 </body>
