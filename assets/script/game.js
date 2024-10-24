@@ -4,8 +4,8 @@
     const lWordModal = document.getElementById("lostWord");
     const gameOverModal = document.getElementById("gameOverModal");
     gameOverModal.style.visibility = "hidden";
-    castBubble.src = "..Wicked/assets/images/castBubble.png";
-    const witch = new Sprite("../Wicked-Words/assets/images/witchSprite.png", 58, 46, 2, 20, 0, 0, 2);
+    castBubble.src = "../Wicked-Words/assets/images/castBubble.png";
+    const witch = new Sprite("../assets/images/witchSprite.png", 58, 46, 2, 20, 0, 0, 2);
     witch.setPosition((1920 / 2) -58, (1080 /2) - 46);
 
     let bat = new Sprite("../Wicked-Words/assets/images/batSprite.png", 32, 32, 4, 20, 0, 0, 2.8);
@@ -123,7 +123,7 @@
             ctx.font = "30px Arial";
             ctx.fillText("Score : " + score,50,50);
         } else {
-            gameOverModal.modal("hide");
+           
             document.body.classList.add('modal-open');
         }
 
