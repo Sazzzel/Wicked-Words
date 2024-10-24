@@ -1,10 +1,12 @@
     /* jshint esversion: 6 */
     import Sprite from './sprite.js';
     const castBubble = new Image();
-    
+    const lWordModal = document.getElementById("lostWord");
+    const gameOverModal = document.getElementById("gameOverModal");
+
     castBubble.src = "../Wicked-Words/assets/images/castBubble.png";
     const witch = new Sprite("../Wicked-Words/assets/images/witchSprite.png", 58, 46, 2, 20, 0, 0, 2);
-    witch.setPosition(1920 / 2, 1080 /2 );
+    witch.setPosition((1920 / 2) -58, (1080 /2) - 46);
 
     let bat = new Sprite("../Wicked-Words/assets/images/batSprite.png", 32, 32, 4, 20, 0, 0, 2.8);
     
@@ -16,7 +18,7 @@
 
     const lsModal = document.getElementById("landscapeModal");
     // HTML Score Holder
-    // const SCORE_DIV = document.getElementById("score");
+    const SCORE_DIV = document.getElementById("score");
 
     
     let canvas = document.getElementById('lests');
@@ -49,15 +51,22 @@
 
             let dir =  Math.abs(yVel)  > Math.abs(xVel) ? (yVel > 0 ? 0 : 2) : (xVel > 0 ? 1 : 3);
         
-            //dir = yVel  > 0 ? 0 : 2
+            function pauseAudio() {
+                audio2.pause();
+            }
+            
             monsters[i].yFrame = dir;
             monsters[i].x += xVel;
             monsters[i].y += yVel;  
             monsters[i].update();
             monsters[i].draw(ctx);
             if(distance < 10){
+                isPlaying = false;
+                gameOverModal.style.visibility = "Block";
                 resetMonsters();
-                alert('Game Over');
+                pauseAudio();
+                lostWord = puzzle;
+                lWordModal.innerHTML = lostWord;
                 newWord();
                 score = 0;
             }
@@ -117,9 +126,11 @@
         requestAnimationFrame(gameLoop);
     }
 
-
+    const audio1 = new Audio("../Wicked-Words/assets/audio/Witch.mp3");
+    const audio2 = new Audio("../Wicked-Words/assets/audio/COAP.mp3");
 
     function play () {
+        
         document.getElementById("footer").style.display = "none";
         document.getElementById("main").style.display = "none";
         document.getElementById("how-to-play").style.display = "none";
@@ -127,7 +138,13 @@
         document.querySelector('.modal-backdrop').style.display = "none";
         document.querySelector('#puzzle').style.display = "block";
         document.querySelector('#puzzle-style').style.display = "block";
+        audio1.play();
+        audio1.volume = 0.1;
+        audio2.play();
+        audio2.volume = 0.1; 
+        audio2.loop = true;          
         document.getElementById("answer").focus();
+        
         resetMonsters();
         isPlaying = true;
         
@@ -142,17 +159,23 @@
               
                 document.getElementById('answer').value = '';   
                 score+= gameType == "shuffle" ?  20 : 5;
-                level = Math.floor(score / 100) + 1;
+                
+              
+                const scorePerLevel = gameType === "shuffle" ? 200 : 50 ;
+                level = Math.floor(score / scorePerLevel) + 1;
                 level = level > 6 ? 6 : level;
-                // SCORE_DIV.innerHTML = "Score :" + score;
+
+               
+                SCORE_DIV.innerHTML = "Score :" + score;
             }
         }
 
-        // update scoregit 
+        //update score
         
     
     });
     document.querySelector('.modal-start-game').addEventListener('click' , play);
+    document.querySelector('.btn-retry').addEventListener('click' , play);
     gameLoop();
    
     
