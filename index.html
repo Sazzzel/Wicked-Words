@@ -44,11 +44,22 @@
     <main id="main">
 
 
+        <div class="logo-title">
 
-        <div class="    hero">
-            <div class="   hero-bg"></div> <!-- Blurred background image -->
+            <h3 class="logo-title-start">
+
+                Welcome To
+            </h3>
+
+            <br>
+
+            <h1 class="logo-title-main">Wicked Words</h1>
+
 
         </div>
+
+
+
 
         <!-- Modal Button -->
 
@@ -56,25 +67,6 @@
 
         <button type="button" class="btn btn-dark play-btn" id="play-btn" data-toggle="modal"
             data-target="#exampleModalCenter">Play Game</button>
-
-        <div class="  d-flex justify-content-between  hero-content">
-
-
-            <div>
-                <!-- Left Hero Image -->
-                <img src="assets/images/hero-left-side.webp" class="left-hero" alt="Decorative Left Hero Image">
-            </div>
-
-            <div>
-                <!-- Right Hero Image -->
-                <img src="assets/images/hero-right-side.webp" class="right-hero" alt="Decorative Right Hero Image">
-            </div>
-
-
-
-
-
-        </div>
 
 
         <!-- Modal Vertical Pop-up -->
@@ -109,9 +101,24 @@
             </div>
         </div>
 
+        <div class=" d-flex justify-content-between  hero-content">
 
 
 
+
+            <!-- Left Hero Image -->
+            <img src="assets/images/hero-left-side.webp" class="left-hero" alt="Decorative Left Hero Image">
+
+
+
+            <!-- Right Hero Image -->
+            <img src="assets/images/hero-right-side.webp" class="right-hero" alt="Decorative Right Hero Image">
+
+
+        </div>
+
+
+        <!-- Modal Landscape Pop-up -->
 
         <div id="landscapeModal">
 
@@ -121,6 +128,39 @@
 
 
                     <div class="rotate-icon">🔄</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="gameOverModal" class="game-over-modal">
+            <div class="game-over-modal-content">
+                <h2>Game Over!</h2>
+
+
+                <p>You lost on the word: <span id="lostWord">
+
+
+
+                    </span></p>
+
+                <p>Your total score: <span id="score">
+
+
+
+                    </span></p>
+
+                <div class="modal-buttons">
+                    <button class="btn-retry">Retry</button>
+
+                    <button class="btn-homepage">
+
+                        <a href="index.html"> Return to Homepage </a>
+
+
+                    </button>
                 </div>
             </div>
         </div>
@@ -173,9 +213,6 @@
             <div>
 
                 <div id="about-us">
-                    <h3>About us</h3>
-
-                    <br>
 
                     <h1>The Four Horsemen</h1>
 
