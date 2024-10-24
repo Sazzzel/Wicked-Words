@@ -4,7 +4,6 @@ const words = [
   [
     "bat",
     "cat",
-    "boo",
     "web",
     "fog",
     "owl",
@@ -137,7 +136,7 @@ let hardMode = document.querySelector('.btn-outline-danger');
 normalMode.addEventListener('click' , clickNormal);
 
   function clickNormal(){
-   gameType = "unscrambled";
+  gameType = "unscrambled";
   handleGameType();
   newWord();
 }
@@ -146,26 +145,26 @@ normalMode.addEventListener('click' , clickNormal);
 hardMode.addEventListener('click' , clickHard);
 
   function clickHard(){
-   gameType = "scramble";
+  gameType = "scramble";
   handleGameType();
   newWord();
 }
 
 function handleGameType(){
 
-
-
   return gameType;
 }
   gameType =  handleGameType();
 
 function newWord(){
+    console.log(gameType);
     puzzle= words[Math.floor(level - 1)][Math.floor(Math.random() * words[Math.floor(level - 1)].length)];
-      let shuffle = puzzle;
+    let shuffle = puzzle;
     if(gameType === 'scramble'){
        shuffle =  puzzle.split('').sort(
         function(){return 0.5-Math.random();}).join('');
     }
 
-  document.getElementById("Puzzle").innerHTML = shuffle;
+
+  document.getElementById("puzzle").innerHTML = shuffle;
 }
