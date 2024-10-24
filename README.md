@@ -159,7 +159,7 @@ The game will play after the game mode and level have been selected.
    * [Google Fonts - Alice](https://fonts.google.com/specimen/Alice?preview.text=Click%20the%20space%20to%20place%20a%20counter%20) 
 
 
-### **Imagery** 
+
 
 
 ---
@@ -171,20 +171,20 @@ The game will play after the game mode and level have been selected.
  <details open>
 <summary> Desktop Naviagtion bar</summary>  
 
-![Desktop Naviagtion bar]()
+![Desktop Naviagtion bar](docs/nav%20image.png)
 </details> 
 
 
-### **Hero Image**
+### **Main Content**
 
 <details>
-<summary></summary>  
+<summary> Main content image</summary>  
 
-![Hero Image]()
+![Hero Image](docs/main%20content%20image.png)
 </details> 
 
 
-### **Footer**
+
 
 <details>
 <summary>Desktop Footer</summary>  
@@ -303,7 +303,18 @@ https://chatgpt.com/
 
 
 ### **Acknowledgements**
+git 
+Special Thanks Too
 
+Amy – Our dedicated teacher and facilitator, for your invaluable guidance and support throughout the Hackathon.
+
+Sazzzel – Our incredible team leader (The Boss), for leading the team with great coordination, vision, patience and keeping everything on track.
+
+Matt – For your excellent work on JavaScript, bringing the game’s functionality to life.
+
+Yazdan – For your hard work on HTML and CSS, ensuring the game's structure and layout look great.
+
+Yvonne – For your contributions to the CSS, creating a cohesive and visually appealing design.
 
 
 
