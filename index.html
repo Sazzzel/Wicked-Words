@@ -6,25 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wicked Words</title>
 
-    <!-- Bootstrap  -->
+    <!-- Bootstrap -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
 
     <!-- style css -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
-
-
-
-
     <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon-64x64.png">
-
-
-
-
 </head>
-
-
 
 <body>
 
@@ -32,140 +21,73 @@
 
 
 
-
     <header id="header">
-        
-        <div class="logo"> 
-            
-            <a href="index.html">  Wicked Words   </a>
-
-
-
+        <div class="logo">
+            <a href="index.html">Wicked Words</a>
         </div>
-        
-        
+
         <div class="menu-toggle">☰</div>
         <nav>
-            <a href="#">How To Play</a>
-            <a href="#">About Us</a>
-
+            <a href="#" data-toggle="modal" data-target="#exampleModalCenter">Play</a>
+            <a href="#how-to-play">How To Play</a>
+            <a href="#about-us">About Us</a>
         </nav>
-        
     </header>
 
+
+
+
     <main id="main">
+        <div class="    hero">
+            <div class="   hero-bg"></div> <!-- Blurred background image -->
+
+            <div class="    hero-content">
 
 
-        <section class="hero">
-            <div class="hero-bg"> </div> <!-- Blurred background image -->
+                <!-- Left Hero Image -->
+                <img src="assets/images/hero-left-side.webp" class="left-hero" alt="Decorative Left Hero Image">
 
-            <div class="hero-content">
+                <!-- Right Hero Image -->
+                <img src="assets/images/hero-right-side.webp" class="right-hero" alt="Decorative Right Hero Image">
 
-
-
-
-
-
-                <img src="assets/images/Footer.webp" alt="Hero Image" class="main-hero">
-
-                <img src="assets/images/hero left side.webp" alt="Hero-Image-left" class=" left-hero">
-
-                <img src="assets/images/hero right side.webp" alt="Hero-Image-right" class="right-hero">
 
 
             </div>
-        </section>
-
-
+        </div>
 
         <!-- Modal Button -->
 
-        <button type="button" class="btn btn-dark play-btn" data-toggle="modal" data-target="#exampleModalCenter">
+        <button type="button" class="btn btn-dark play-btn" id="play-btn" data-toggle="modal"
+            data-target="#exampleModalCenter">Play Game</button>
 
-            Play Game
-
-        </button>
 
         <!-- Modal Vertical Pop-up -->
-
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
-
                 <div class="modal-content">
                     <div class="modal-header">
-
-
-                        <h5 class="modal-title">
-
-                            Select Game Mode
-
-                        </h5>
-
+                        <h5 class="modal-title">Select Game Mode</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">X</span>
+                            <span aria-hidden="true">&times;</span>
                         </button>
-
-
                     </div>
-                    <div class="modal-body ">
-
-                        <p> </p>
-
-                        <div class="d-flex justify-content-around   ">
-
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-around">
                             <div>
                                 <button type="button" class="btn btn-lg btn-game-normal btn-outline-warning">Spooky Mode
                                 </button>
-
-                                <p class="modal-btn-text">
-
-                                    Normal
-                                    <br>
-                                    (Unscrambled Words)
-
-                                </p>
-
+                                <p class="modal-btn-text">Normal<br>(Unscrambled Words)</p>
                             </div>
-
-
-
                             <div>
-
-                                <button type="button" class="btn  btn-lg  btn-game-hard    btn-outline-danger">Haunted
-                                    Mode</button>
-                                <p class="modal-btn-text">
-
-
-                                    Hard
-                                    <br>
-                                    (Scrambled Words)
-
-
-
-
-                                </p>
-
+                                <button type="button" class="btn btn-lg btn-game-hard btn-outline-danger">Haunted Mode
+                                </button>
+                                <p class="modal-btn-text">Hard<br>(Scrambled Words)</p>
                             </div>
-
-
-
                         </div>
-
-
-
                     </div>
-
                     <div class="modal-footer">
-
-
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-
-                        <button type="button" class="   btn  modal-start-game ">Start Game</button>
-
-
+                        <button type="button" class="btn modal-start-game">Start Game</button>
                     </div>
                 </div>
             </div>
@@ -175,31 +97,57 @@
         <!-- How To play section-->
 
 
+
+
+
+
+
+
     </main>
 
 
-    <div id="puzzle" style="text-align: center; position:absolute; top:70%; left:45%;">
+    <!-- How To play section-->
+    <section id="how-to-play" class="how-to-play-section">
+        <h2>How to Play</h2>
+        <div class="how-to-play-content">
+            <h3>Game Rules</h3>
+            <ol>
+                <li>Choose your game mode: Spooky Mode (Normal) or Haunted Mode (Hard).</li>
+                <li>You'll be presented with a word puzzle to solve.</li>
+                <li>In Spooky Mode, the words are unscrambled. In Haunted Mode, the words are scrambled.</li>
+                <li>Type your answer in the input box provided.</li>
+                <li>Solve the puzzle to cast a spell and progress in the game.</li>
+            </ol>
+            <h3>Tips</h3>
+            <ul>
+                <li>Pay attention to the context and theme of the game for clues.</li>
+                <li>In Haunted Mode, try rearranging the letters to form familiar words.</li>
 
-        <h1>
-            <div id="Puzzle"> Solve this!</div>
-        </h1>
+            </ul>
+        </div>
+    </section>
+
+
+    <div id="puzzle" style="text-align: center; position:absolute; top:70%; left:45%;">
+        <div id="Puzzle">
+
+            <h1> Solve this! </h1>
+
+        </div>
+
 
         <input type="text" id="answer" placeholder="Enter your answer here">
-
-        <br>
-        <br>
-
-        <p class="puzzle-text"  >Solve & Type In The Puzzle Word To Cast A Spell</p>
-
+        <br><br>
+        <p class="puzzle-text">Solve & Type In The Puzzle Word To Cast A Spell</p>
     </div>
    
-    <div style="position: absolute;" id="landscapeModal"> <h1>TURN IT SIDEWAYS DUMB ASS!</h1></div>
+
 
     <footer id="footer">
 
 
 
-        <footer>
+        <footer id="about-us">
             <!-- Footer content -->
 
             <h2>About us</h2>
@@ -215,7 +163,7 @@
 
             <ul id="social-media-icons">
 
-                <li class="footer-faces"  ><a href="https://github.com/Sazzzel" target="_blank" rel="noopener"
+                <li class="footer-faces"><a href="https://github.com/Sazzzel" target="_blank" rel="noopener"
                         aria-label="Visit our twitter page (opens in a new tab)"><img
                             src="assets/images/Sazzzels_head.webp" alt="Sazzzel's head"></a>
 
@@ -241,7 +189,7 @@
                 </li>
 
 
-                <li  class="footer-faces"    ><a href="https://github.com/m-dixon5" target="_blank" rel="noopener"
+                <li class="footer-faces"><a href="https://github.com/m-dixon5" target="_blank" rel="noopener"
                         aria-label="Visit our instagram page (opens in a new tab)"><img
                             src="assets/images/Matts_Head.webp" alt="Matt's Head" style="height: 77px ;"></a>
                     <p class="footer-note">
@@ -252,9 +200,9 @@
 
                 </li>
 
-                <li class="footer-faces" ><a href="https://github.com/Yazhmd" target="_blank" rel="noopener"
+                <li class="footer-faces"><a href="https://github.com/Yazhmd" target="_blank" rel="noopener"
                         aria-label="Visit our github page (opens in a new tab)"><img
-                            src="assets/images/Yazdans_Head.webp" style="height: 79px ;"> </a>
+                            src="assets/images/Yazdans_Head.webp" alt="Yazdan Head" style="height: 79px ;"> </a>
 
                     <p class="footer-note">
 
@@ -266,10 +214,6 @@
                 </li>
 
             </ul>
-
-
-
-
 
 
 
@@ -287,8 +231,12 @@
 
         </p>
 
-
     </footer>
+
+
+
+
+
 
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
@@ -299,22 +247,28 @@
         });
     </script>
 
+    <script>
+        function checkOrientation() {
+            if (window.innerHeight > window.innerWidth) {
+                document.querySelector('.landscape-message').style.display = 'block';
+            } else {
+                document.querySelector('.landscape-message').style.display = 'none';
+            }
+        }
+
+        window.addEventListener('load', checkOrientation);
+        window.addEventListener('resize', checkOrientation);
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./assets/script/words.js"></script>
-
     <script src="./assets/script/background.js"></script>
-
     <script type="module" src="./assets/script/game.js"></script>
 
 
+
 </body>
-
-
-
 
 </html>

@@ -6,7 +6,10 @@
 
 :root {
   --header-height: 100px;
+
   --footer-height: 60px;
+
+
   --primary-color: #ff6600;
   --secondary-color: #000000;
   --text-color: #ffffff;
@@ -30,6 +33,7 @@ body {
   text-decoration: none;
 
 }
+
 
 h1 {
   font-size: 48px;
@@ -58,11 +62,16 @@ canvas {
   display: block;
   margin: 0 auto;
   background-color: black;
+
+  
   z-index: -10;
 
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
 
 a {
   color: #ff7518;
@@ -70,7 +79,7 @@ a {
 }
 
 a:hover {
-  color: #8b0000;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -84,7 +93,7 @@ a:active {
 /* ---------------------------------------------------------- Header */
 
 header {
-  background-color: rgba(168, 100, 37, 0.185);
+  background-color: rgba(0, 0, 0, 0.5);
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
@@ -151,7 +160,7 @@ nav a {
 
 nav a:hover {
 
-  background-color: #161515;
+
   color: #ffffff;
 
 
@@ -180,12 +189,10 @@ main {
 
   flex-grow: 1;
   /* Allow main to grow and fill space */
-  padding: 20px;
 
-  margin-top: var(--header-height);
-
-  margin-bottom: var(--footer-height);
-  /* Space for footer */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+   min-height: 100vh;
 }
 
 
@@ -194,6 +201,8 @@ main {
 
 
 /* ---------------------------------------------- hero image */
+
+
 .hero {
   position: relative;
   height: 100vh;
@@ -203,70 +212,86 @@ main {
   align-items: center;
   overflow: hidden;
   /* Hide overflow of background */
+
 }
 
 /* Blurred background */
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('background_image.jpg');
 
 
-  background-size: cover;
-  background-position: center;
-  filter: blur(8px);
-  /* Blurred background */
-  z-index: -1;
+ 
+/* Hero content (foreground) */ 
 
-}
 
-/* Hero content (foreground) */
 .hero-content {
   position: relative;
   text-align: center;
   z-index: 2;
 }
+  
+
+
+ 
+
+
+.jumbotron {
+     
+background-color: #00000000;
+
+  background-image: url('../images/Footer.webp');
+  background-size: cover;  
+  background-position: center;  
+  background-attachment: fixed; /* Keep the background fixed during scrolling */
+  background-repeat: no-repeat;  
+  position: relative; 
+  
+  height: 100vh;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  width: 100vw;  
+
+}
 
 /* Main hero image */
 .main-hero {
-  /* Adjust this size based on your hero image */
-  height: auto;
 
 
-  top: 50px;
-
+  height: 500px;
   z-index: 3;
-
   position: relative;
-  /* Keeps it above the other images */
+  bottom: 0;
+  /* Ensures the main hero image is at the bottom */
+
+
+
+
+
 }
 
 /* Left hero image */
 .left-hero {
-  position: absolute;
-  left: -50px;
+  position: relative;
 
-  top: 50%;
-  transform: translateY(-50%);
 
+  bottom: 0;
+  left: 0;
   max-width: 150px;
   z-index: 4;
   border-radius: 10px;
+
 }
 
 /* Right hero image */
 .right-hero {
-  position: absolute;
-  right: -50px;
 
-  top: 50%;
-  transform: translateY(-50%);
-
+  position: relative;
+  bottom: 0;
+  right: 0;
   max-width: 150px;
   z-index: 4;
+
   border-radius: 10px;
 }
 
@@ -281,7 +306,7 @@ main {
   background-color: #ff7518;
   color: #000000;
   font-size: 2rem;
-  font-family: 'Pirata One', cursive;
+  font-family: 'metal mania', cursive;
   border-radius: 10px;
   padding: 10px 20px;
   text-shadow: 2px 2px 5px #8b0000;
@@ -290,6 +315,21 @@ main {
   letter-spacing: 4px;
 
   transition: background-color 0.3s ease;
+
+  z-index: 5;
+
+
+
+  position: absolute;
+
+  /* Adjusting its position */
+  top: 80%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+
+ 
+
+
 }
 
 
@@ -375,16 +415,19 @@ main {
 }
 
 
-
-
 .btn-game-normal:focus {
 
   background-color: #ffc107;
 
   color: #fff;
 }
+ 
+.btn-game-hard:hover {
 
-
+  background-color: #dc3545;
+  color: black;
+} 
+ 
 .btn-game-hard:focus {
 
   background-color: #dc3545;
@@ -450,6 +493,36 @@ main {
 
 
 
+/* --------------------------------------------------------------------------------- How to play section  */
+
+.how-to-play-section {
+  padding: 50px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  scroll-margin-top: 80px;
+   
+}
+
+.how-to-play-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.how-to-play-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.how-to-play-section h3 {
+  margin-top: 20px;
+}
+
+.how-to-play-section ol,
+.how-to-play-section ul {
+  margin-left: 20px;
+}
+
+
+
 /* ------------------------------------------------------------------------------- puzzle dialogue box */
 
 #puzzle {
@@ -474,7 +547,7 @@ main {
 /* ------------------------------------------------------------------------ Footer  */
 
 footer {
-  grid-area: footer;
+
   text-align: center;
 
   padding: 20px;
@@ -495,7 +568,26 @@ footer {
 
 
 
-
+.jumbotron {
+     
+  background-color: #00000000;
+  
+    background-image: url('../images/Footer.webp');
+    background-size: cover;   
+    background-position: center; 
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+    background-repeat: no-repeat;  
+    position: relative; 
+    
+    height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    width: 100vw;  
+  
+  }
 
 
 
@@ -550,23 +642,21 @@ footer {
 
 
 
- 
 
 
+@media (max-width: 700px) {
 
-@media (max-width: 650px) {
 
-
-  .logo { 
+  .logo {
     margin: 0 auto;
   }
 
-
+/* Shows menu toggle on mobile */
 
   .menu-toggle {
     display: block;
 
-    /* Shows menu toggle on mobile */
+    
   }
 
 
@@ -582,13 +672,23 @@ footer {
 
     height: calc(100vh - var(--header-height));
 
-    background-color: rgba(205, 211, 205, 0.134);
+    background-color: rgba(29, 29, 29, 0.801);
     flex-direction: column;
 
     transition: right 0.3s ease-in-out;
 
     text-shadow: 2px 2px 8px #8b0000;
 
+
+
+  }
+
+
+
+  nav a:hover {
+
+    background-color: rgb(189, 72, 13);
+    color: #ffffff;
 
 
   }
@@ -605,41 +705,27 @@ footer {
 
 
   /* ----------------------------------------------------------  main hero image */
-
-  .main-hero {
-    height: 35svh;
-    /* Adjust this size based on your hero image */
-
-
-    top: 50px;
-
-    z-index: 3;
-
-    position: relative;
-    /* Keeps it above the other images */
-
-  }
-
+ 
 
   .left-hero .right-hero {
-    max-width: 100px;
+    max-width: 75px;
 
     right: -30px;
   }
 
   .right-hero {
 
-    max-width: 100px;
+    max-width: 75px;
 
     right: -30px;
 
 
   }
+ 
 
+ 
 
-
-
-
+ 
   /* puzzel dialogue box */
 
   #puzzle {
@@ -660,29 +746,95 @@ footer {
 
   }
 
+
+  .play-btn {
+    background-color: #ff7518;
+    color: #000000;
+    font-size: 2rem;
+    font-family: 'metal mania', cursive;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-shadow: 2px 2px 5px #8b0000;
+    border: 2px solid #000; 
+  
+    letter-spacing: 4px;
+  
+    transition: background-color 0.3s ease;
+  
+    z-index: 5;
+  
+  
+  
+    position: absolute;
+  
+    /* Adjust its position */
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);  
+  
+   
+  
+  
+  }
+
+
+
+
+.play-btn {
+  background-color: #ff7518;
+  color: #000000;
+  font-size: 2rem;
+  font-family: 'metal mania', cursive;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-shadow: 2px 2px 5px #8b0000;
+  border: 2px solid #000; 
+
+  letter-spacing: 4px;
+
+  transition: background-color 0.3s ease;
+
+  z-index: 5;
+
+
+
+  position: absolute;
+
+  /* Adjust its position */
+  top: 70%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);  
+
  
+
+
 }
 
-     
-@media (min-width: 1050px) {
-          
- 
-  .logo {      
-    margin: 100px;    
+}
+
+
+
+/* ---------------------------------------------------  min-width: 1050px*/
+
+@media (min-width: 1250px) {
+
+
+  .logo {
+    margin: 100px;
   }
-  
+
   nav a {
 
-    
-      box-sizing: border-box;
-      height: auto; 
-       
-      padding: 15px 20px;
-      justify-content:space-between ;
-  
 
-  } 
+    box-sizing: border-box;
+    height: auto;
+
+    padding: 60px 60px;
+    justify-content: space-between;
+
+
+  }
+
 
 
 }
- 
