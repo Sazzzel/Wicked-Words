@@ -9,7 +9,7 @@
 
   --footer-height: 60px;
 
-  
+
   --primary-color: #ff6600;
   --secondary-color: #000000;
   --text-color: #ffffff;
@@ -62,11 +62,13 @@ canvas {
   display: block;
   margin: 0 auto;
   background-color: black;
+
+  
   z-index: -10;
 
 }
 
- 
+
 html {
   scroll-behavior: smooth;
 }
@@ -187,8 +189,10 @@ main {
 
   flex-grow: 1;
   /* Allow main to grow and fill space */
-  
-  
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+   min-height: 100vh;
 }
 
 
@@ -197,6 +201,8 @@ main {
 
 
 /* ---------------------------------------------- hero image */
+
+
 .hero {
   position: relative;
   height: 100vh;
@@ -207,72 +213,85 @@ main {
   overflow: hidden;
   /* Hide overflow of background */
 
-  padding: 0;  
-  margin: 0;
 }
 
 /* Blurred background */
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('background_image.jpg');
 
 
-  background-size: cover;
-  background-position: center;
-  filter: blur(8px);
-  /* Blurred background */
-  z-index: -1;
+ 
+/* Hero content (foreground) */ 
 
-}
 
-/* Hero content (foreground) */
 .hero-content {
   position: relative;
   text-align: center;
   z-index: 2;
 }
+  
+
+
+ 
+
+
+.jumbotron {
+     
+background-color: #00000000;
+
+  background-image: url('../images/Footer.webp');
+  background-size: cover;  
+  background-position: center;  
+  background-attachment: fixed; /* Keep the background fixed during scrolling */
+  background-repeat: no-repeat;  
+  position: relative; 
+  
+  height: 100vh;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  width: 100vw;  
+
+}
 
 /* Main hero image */
 .main-hero {
-  /* Adjust this size based on your hero image */
-  height: auto;
 
 
-  top: 50px;
-
+  height: 500px;
   z-index: 3;
-
   position: relative;
-  /* Keeps it above the other images */
+  bottom: 0;
+  /* Ensures the main hero image is at the bottom */
+
+
+
+
+
 }
 
 /* Left hero image */
 .left-hero {
-  position: absolute;
-  left: -50px;
+  position: relative;
 
-  top: 50%;
-  transform: translateY(-50%);
 
+  bottom: 0;
+  left: 0;
   max-width: 150px;
   z-index: 4;
   border-radius: 10px;
+
 }
 
 /* Right hero image */
 .right-hero {
-  position: absolute;
-  right: -50px;
 
-  top: 50%;
-  transform: translateY(-50%);
- 
+  position: relative;
+  bottom: 0;
+  right: 0;
   max-width: 150px;
   z-index: 4;
+
   border-radius: 10px;
 }
 
@@ -286,7 +305,7 @@ main {
 .play-btn {
   background-color: #ff7518;
   color: #000000;
-  font-size: 2rem; 
+  font-size: 2rem;
   font-family: 'metal mania', cursive;
   border-radius: 10px;
   padding: 10px 20px;
@@ -297,17 +316,17 @@ main {
 
   transition: background-color 0.3s ease;
 
-  z-index: 5;   
+  z-index: 5;
 
- 
 
-  position: absolute; 
 
-/* Adjust its position */
-  top: 50%; 
+  position: absolute;
+
+  /* Adjusting its position */
+  top: 80%;
   left: 50%; 
-  transform: translate(-50%, -50%); 
-  
+  transform: translate(-50%, -50%);
+
  
 
 
@@ -396,16 +415,19 @@ main {
 }
 
 
-
-
 .btn-game-normal:focus {
 
   background-color: #ffc107;
 
   color: #fff;
 }
+ 
+.btn-game-hard:hover {
 
-
+  background-color: #dc3545;
+  color: black;
+} 
+ 
 .btn-game-hard:focus {
 
   background-color: #dc3545;
@@ -460,7 +482,7 @@ main {
 
 .modal-start-game {
 
- 
+
 
   color: #ff6600;
 
@@ -475,13 +497,14 @@ main {
 
 .how-to-play-section {
   padding: 50px 20px;
-  background-color: #2b2a2a;
-  scroll-margin-top: 80px; /* Adjust based on your header height */
+  background-color: rgba(0, 0, 0, 0.5);
+  scroll-margin-top: 80px;
+   
 }
 
 .how-to-play-content {
   max-width: 800px;
-  margin: 0 auto;  
+  margin: 0 auto;
 }
 
 .how-to-play-section h2 {
@@ -493,7 +516,8 @@ main {
   margin-top: 20px;
 }
 
-.how-to-play-section ol, .how-to-play-section ul {
+.how-to-play-section ol,
+.how-to-play-section ul {
   margin-left: 20px;
 }
 
@@ -522,10 +546,10 @@ main {
 
 /* ------------------------------------------------------------------------ Footer  */
 
-footer {   
-  
+footer {
+
   text-align: center;
- 
+
   padding: 20px;
   color: #f5f5f5;
   text-shadow: 1px 1px 5px #ff7518;
@@ -544,7 +568,26 @@ footer {
 
 
 
-
+.jumbotron {
+     
+  background-color: #00000000;
+  
+    background-image: url('../images/Footer.webp');
+    background-size: cover;   
+    background-position: center; 
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+    background-repeat: no-repeat;  
+    position: relative; 
+    
+    height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    width: 100vw;  
+  
+  }
 
 
 
@@ -576,7 +619,7 @@ footer {
 
   letter-spacing: 2px;
 
-} 
+}
 
 
 
@@ -601,21 +644,19 @@ footer {
 
 
 
-
-
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
 
   .logo {
     margin: 0 auto;
   }
 
-
+/* Shows menu toggle on mobile */
 
   .menu-toggle {
     display: block;
 
-    /* Shows menu toggle on mobile */
+    
   }
 
 
@@ -643,13 +684,13 @@ footer {
   }
 
 
- 
+
   nav a:hover {
 
-background-color: grey; 
+    background-color: rgb(189, 72, 13);
     color: #ffffff;
-  
-  
+
+
   }
 
   nav.active {
@@ -664,41 +705,27 @@ background-color: grey;
 
 
   /* ----------------------------------------------------------  main hero image */
-
-  .main-hero {
-    height: 35svh;
-    /* Adjust this size based on your hero image */
-
-
-    top: 50px;
-
-    z-index: 3;
-
-    position: relative;
-    /* Keeps it above the other images */
-
-  }
-
+ 
 
   .left-hero .right-hero {
-    max-width: 100px;
+    max-width: 75px;
 
     right: -30px;
   }
 
   .right-hero {
 
-    max-width: 100px;
+    max-width: 75px;
 
     right: -30px;
 
 
   }
+ 
 
+ 
 
-
-
-
+ 
   /* puzzel dialogue box */
 
   #puzzle {
@@ -720,12 +747,76 @@ background-color: grey;
   }
 
 
+  .play-btn {
+    background-color: #ff7518;
+    color: #000000;
+    font-size: 2rem;
+    font-family: 'metal mania', cursive;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-shadow: 2px 2px 5px #8b0000;
+    border: 2px solid #000; 
+  
+    letter-spacing: 4px;
+  
+    transition: background-color 0.3s ease;
+  
+    z-index: 5;
+  
+  
+  
+    position: absolute;
+  
+    /* Adjust its position */
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);  
+  
+   
+  
+  
+  }
+
+
+
+
+.play-btn {
+  background-color: #ff7518;
+  color: #000000;
+  font-size: 2rem;
+  font-family: 'metal mania', cursive;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-shadow: 2px 2px 5px #8b0000;
+  border: 2px solid #000; 
+
+  letter-spacing: 4px;
+
+  transition: background-color 0.3s ease;
+
+  z-index: 5;
+
+
+
+  position: absolute;
+
+  /* Adjust its position */
+  top: 70%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);  
+
+ 
+
+
 }
+
+}
+
 
 
 /* ---------------------------------------------------  min-width: 1050px*/
 
-@media (min-width: 1050px) {
+@media (min-width: 1250px) {
 
 
   .logo {
@@ -743,6 +834,7 @@ background-color: grey;
 
 
   }
+
 
 
 }
