@@ -3,16 +3,16 @@
     const castBubble = new Image();
     const lWordModal = document.getElementById("lostWord");
     const gameOverModal = document.getElementById("gameOverModal");
-
-    castBubble.src = "../Wicked-Words/assets/images/castBubble.png";
-    const witch = new Sprite("../Wicked-Words/assets/images/witchSprite.png", 58, 46, 2, 20, 0, 0, 2);
+    gameOverModal.style.visibility = "hidden";
+    castBubble.src = "../assets/images/castBubble.png";
+    const witch = new Sprite("../assets/images/witchSprite.png", 58, 46, 2, 20, 0, 0, 2);
     witch.setPosition((1920 / 2) -58, (1080 /2) - 46);
 
-    let bat = new Sprite("../Wicked-Words/assets/images/batSprite.png", 32, 32, 4, 20, 0, 0, 2.8);
+    let bat = new Sprite("../assets/images/batSprite.png", 32, 32, 4, 20, 0, 0, 2.8);
     
-    let pumpkin = new Sprite("../Wicked-Words/assets/images/pumpkinSprite.png", 32, 64, 3, 20, 0, 0, 1.8);
+    let pumpkin = new Sprite("../assets/images/pumpkinSprite.png", 32, 64, 3, 20, 0, 0, 1.8);
 
-    let skeley = new Sprite("../Wicked-Words/assets/images/skeletonSprite.png", 92, 184, 3, 20, 0, 0, 0.7);
+    let skeley = new Sprite("../assets/images/skeletonSprite.png", 92, 184, 3, 20, 0, 0, 0.7);
 
 
 
@@ -32,6 +32,7 @@
     let castSpeed = 20;
     let score = 0;
     let isPlaying = false;
+    let lostWord= "";
 
     monsters.push(bat);
     monsters.push(skeley);
@@ -61,14 +62,15 @@
             monsters[i].update();
             monsters[i].draw(ctx);
             if(distance < 10){
-                isPlaying = false;
-                gameOverModal.style.visibility = "Block";
+                gameOverModal.style.visibility = "visible";
+                SCORE_DIV.innerHTML = "Score :" + score;
                 resetMonsters();
                 pauseAudio();
                 lostWord = puzzle;
                 lWordModal.innerHTML = lostWord;
                 newWord();
                 score = 0;
+                isPlaying = false;
             }
 
         }
@@ -97,6 +99,7 @@
             let angle = Math.random() * Math.PI * 2;
             monsters[i].x = witch.x + Math.cos(angle) * distance;
             monsters[i].y = witch.y + Math.sin(angle) * distance;
+          
         }
     }
 
@@ -119,15 +122,18 @@
             ctx.fillStyle = "white";
             ctx.font = "30px Arial";
             ctx.fillText("Score : " + score,50,50);
-        } 
+        } else {
+            
+            document.body.classList.add('modal-open');
+        }
 
         
         
         requestAnimationFrame(gameLoop);
     }
 
-    const audio1 = new Audio("../Wicked-Words/assets/audio/Witch.mp3");
-    const audio2 = new Audio("../Wicked-Words/assets/audio/COAP.mp3");
+    const audio1 = new Audio("../assets/audio/Witch.mp3");
+    const audio2 = new Audio("../assets/audio/COAP.mp3");
 
     function play () {
         
@@ -144,7 +150,7 @@
         audio2.volume = 0.1; 
         audio2.loop = true;          
         document.getElementById("answer").focus();
-        
+        gameOverModal.style.visibility = "hidden";
         resetMonsters();
         isPlaying = true;
         
@@ -166,8 +172,9 @@
                 level = level > 6 ? 6 : level;
 
                
-                SCORE_DIV.innerHTML = "Score :" + score;
+                
             }
+            
         }
 
         //update score
