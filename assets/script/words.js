@@ -4,7 +4,6 @@ const words = [
   [
     "bat",
     "cat",
-    "boo",
     "web",
     "fog",
     "owl",
@@ -160,12 +159,14 @@ function handleGameType(){
   gameType =  handleGameType();
 
 function newWord(){
+    console.log(gameType);
     puzzle= words[Math.floor(level - 1)][Math.floor(Math.random() * words[Math.floor(level - 1)].length)];
-      let shuffle = puzzle;
+    let shuffle = puzzle;
     if(gameType === 'scramble'){
        shuffle =  puzzle.split('').sort(
         function(){return 0.5-Math.random();}).join('');
     }
+
 
   document.getElementById("Puzzle").innerHTML = shuffle;
 }
