@@ -123,7 +123,7 @@
             ctx.font = "30px Arial";
             ctx.fillText("Score : " + score,50,50);
         } else {
-            
+            gameOverModal.modal("hide");
             document.body.classList.add('modal-open');
         }
 
