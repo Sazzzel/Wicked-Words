@@ -46,9 +46,7 @@ h2,
 h3,
 h4,
 h5,
-h6 
-
-{
+h6 {
   font-family: "metal mania", system-ui;
   letter-spacing: 5px;
 
@@ -67,7 +65,7 @@ canvas {
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0);
 
-  
+
   z-index: -10;
 
 }
@@ -103,7 +101,7 @@ header {
 
   justify-content: space-between;
   align-items: center;
-  
+
   padding: 0 20px;
   position: fixed;
   top: 0;
@@ -198,7 +196,7 @@ main {
 
   display: grid;
   grid-template-rows: auto 1fr auto;
-   min-height: 100vh;
+  min-height: 100vh;
 }
 
 
@@ -224,8 +222,8 @@ main {
 /* Blurred background */
 
 
- 
-/* Hero content (foreground) */ 
+
+/* Hero content (foreground) */
 
 
 .hero-content {
@@ -233,14 +231,14 @@ main {
   text-align: center;
   z-index: 2;
 
-  
+
 }
-  
 
 
- 
 
- 
+
+
+
 
 /* Main hero image */
 .main-hero {
@@ -312,10 +310,10 @@ main {
 
   /* Adjusting its position */
   top: 80%;
-  left: 50%; 
+  left: 50%;
   transform: translate(-50%, -50%);
 
- 
+
 
 
 }
@@ -345,7 +343,7 @@ main {
 .modal-content {
   background-color: #000000;
   color: #f5f5f5;
-  border: 2px solid #ff7518; 
+  border: 2px solid #ff7518;
 
 }
 
@@ -409,7 +407,7 @@ main {
 
   color: #fff;
 }
- 
+
 
 
 
@@ -417,8 +415,8 @@ main {
 
   background-color: #dc3545;
   color: black;
-} 
- 
+}
+
 .btn-game-hard:focus {
 
   background-color: #dc3545;
@@ -490,7 +488,7 @@ main {
   padding: 50px 20px;
   background-color: rgba(0, 0, 0, 0.5);
   scroll-margin-top: 80px;
-   
+
 }
 
 .how-to-play-content {
@@ -539,29 +537,30 @@ main {
 
 #footer {
 
-   
+
 
   background-image: url('../images/The_four_horsemen_image_footer.webp');
 
 
-  background-size: cover;  
-  background-position: center;  
+  background-size: cover;
+  background-position: center;
 
 
-  background-attachment: fixed; /* Keep the background fixed during scrolling */
-  background-repeat: no-repeat;  
-  position: relative;  
-  
+  background-attachment: fixed;
+  /* Keep the background fixed during scrolling */
+  background-repeat: no-repeat;
+  position: relative;
+
   padding: 40px 0;
 
   height: 100vh;
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;   
-  text-align: center;    
-  width: auto;   
- 
+  align-items: center;
+  text-align: center;
+  width: auto;
+
 }
 
 
@@ -576,10 +575,8 @@ footer {
 .footer-backdrop {
 
   position: relative;
-  z-index: 2
- 
-  content "";
-  position: absolute;      
+  z-index: 2 content "";
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -588,35 +585,35 @@ footer {
 
   /* Footer background image blur */
   background-color: rgba(0, 0, 0, 0.75);
- 
 
-  
+
+
 }
- 
-  
-  
-#about-us {               
 
-    
-  width: 100%; 
-  position:  absolute;  
-  bottom: 510px;   
-  left: 0;    
-  
-} 
+
+
+#about-us {
+
+
+  width: 100%;
+  position: absolute;
+  bottom: 510px;
+  left: 0;
+
+}
 
 
 #click-us-text {
- 
 
 
 
-  width: 100%; 
-  position:  absolute;  
-  bottom: 120px;     
-  left: 0;   
 
- 
+  width: 100%;
+  position: absolute;
+  bottom: 120px;
+  left: 0;
+
+
 }
 
 #social-media-icons {
@@ -624,10 +621,10 @@ footer {
   text-align: center;
 
   width: 100%;
-  position:  absolute;  
-  bottom: 100px;  
+  position: absolute;
+  bottom: 100px;
   left: 0;
-  
+
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
@@ -658,7 +655,7 @@ footer {
 .footer-bottom {
   width: 100%;
   position: absolute;
-  bottom: 0; 
+  bottom: 0;
   left: 0;
   display: flex;
   justify-content: flex-start;
@@ -672,7 +669,7 @@ footer {
   text-align: left;
 
 
-  
+
   font-size: 14px;
 
 
@@ -695,12 +692,12 @@ footer {
     margin: 0 auto;
   }
 
-/* Shows menu toggle on mobile */
+  /* Shows menu toggle on mobile */
 
   .menu-toggle {
     display: block;
 
-    
+
   }
 
 
@@ -749,14 +746,14 @@ footer {
 
 
   /* ----------------------------------------------------------  main hero image */
- 
 
- 
- 
 
- 
 
- 
+
+
+
+
+
   /* puzzel dialogue box */
 
   #puzzle {
@@ -786,74 +783,72 @@ footer {
     border-radius: 10px;
     padding: 10px 20px;
     text-shadow: 2px 2px 5px #8b0000;
-    border: 2px solid #000; 
-  
+    border: 2px solid #000;
+
     letter-spacing: 4px;
-  
+
     transition: background-color 0.3s ease;
-  
+
     z-index: 5;
-  
-  
-  
+
+
+
     position: absolute;
-  
+
     /* Adjust its position */
     top: 50%;
-    left: 50%; 
-    transform: translate(-50%, -50%);  
-  
-   
-  
-  
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+
+
   }
 
 
 
 
-.play-btn {
-  background-color: #ff7518;
-  color: #000000;
-  font-size: 2rem;
-  font-family: 'metal mania', cursive;
-  border-radius: 10px;
-  padding: 10px 20px;
-  text-shadow: 2px 2px 5px #8b0000;
-  border: 2px solid #000; 
+  .play-btn {
+    background-color: #ff7518;
+    color: #000000;
+    font-size: 2rem;
+    font-family: 'metal mania', cursive;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-shadow: 2px 2px 5px #8b0000;
+    border: 2px solid #000;
 
-  letter-spacing: 4px;
+    letter-spacing: 4px;
 
-  transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
 
-  z-index: 5;
-
-
-
-  position: absolute;
-
-  /* Adjust its position */
-  top: 70%; 
-  left: 50%; 
-  transform: translate(-50%, -50%);  
-
- 
+    z-index: 5;
 
 
-}
+
+    position: absolute;
+
+    /* Adjust its position */
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
 
 
 
- 
-#click-us-text {
+  }
+
+  #click-us-text {
 
 
-  width: 100%; 
-  position:  absolute;  
-  bottom: 250px;    
-  left: 0;     
-  
-}
+    width: 100%;
+    position: absolute;
+    bottom: 250px;
+    left: 0;
+
+  }
+
+
 
 }
 
@@ -880,14 +875,14 @@ footer {
 
   }
 
-#click-us-text {
+  #click-us-text {
 
 
-  width: 100%; 
-  position:  absolute;  
-  bottom: 120px;    
-  left: 0;     
-  
-}
+    width: 100%;
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+
+  }
 
 }
