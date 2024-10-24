@@ -133,17 +133,29 @@ The game will play after the game mode and level have been selected.
 
 ### **Color Scheme**
 
-<details >
+<details open>
 <summary>- Colour Palette</summary>  
 
-![- Colour Palette]()
-</details> 
+![Colour Palette](docs/colour%20palette%20-%20wicked%20words.PNG)
+</details>
+
+### **Color Contrast**
+
+![colour contrast check 1](docs/color%20contrast%20-%20wicked%20words%201.PNG)
+
+![colour contrast check 2](docs/color%20contrast%20-%20wicked%20words%202.PNG)
 
 ### **Typography**
 * Headers
-  * [Google Fonts - Pirata One](https://fonts.google.com/specimen/Pirata+One?preview.text=The%20Four%20HorseMen&query=Pirata+One) 
+
+  ![Metal Mania screenshot](docs/Metal%20mania%20font%20screenshot.PNG)
+
+  * [Google Fonts - Metal Mania](https://fonts.google.com/specimen/Pirata+One?preview.text=The%20Four%20HorseMen&query=Pirata+One) 
 
 * For the rest of the site.
+
+  ![Alice font screenshot](docs/alice%20font%20screenshot.PNG)
+
    * [Google Fonts - Alice](https://fonts.google.com/specimen/Alice?preview.text=Click%20the%20space%20to%20place%20a%20counter%20) 
 
 
