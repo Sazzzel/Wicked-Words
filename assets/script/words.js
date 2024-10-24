@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 const words = [
   // Difficulty 1 (short words: 3 letter)
   [
@@ -127,13 +128,43 @@ const words = [
 
 let level = 1;
 let puzzle = null;
-let gameType = "scramble";
+let gameType;
+
+let normalMode = document.querySelector('.btn-outline-warning');
+let hardMode = document.querySelector('.btn-outline-danger');
+
+// Event listeners
+normalMode.addEventListener('click' , clickNormal);
+
+  function clickNormal(){
+   gameType = "unscrambled";
+  handleGameType();
+  newWord();
+}
+
+
+hardMode.addEventListener('click' , clickHard);
+
+  function clickHard(){
+   gameType = "scramble";
+  handleGameType();
+  newWord();
+}
+
+function handleGameType(){
+
+
+
+  return gameType;
+}
+  gameType =  handleGameType();
 
 function newWord(){
     puzzle= words[Math.floor(level - 1)][Math.floor(Math.random() * words[Math.floor(level - 1)].length)];
       let shuffle = puzzle;
     if(gameType === 'scramble'){
-       shuffle =  puzzle.split('').sort(function(){return 0.5-Math.random()}).join('');
+       shuffle =  puzzle.split('').sort(
+        function(){return 0.5-Math.random();}).join('');
     }
 
   document.getElementById("Puzzle").innerHTML = shuffle;

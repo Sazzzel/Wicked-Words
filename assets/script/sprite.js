@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 // Sprite class
 export default class Sprite {
     constructor(imageSrc, frameWidth, frameHeight, frames, frameDelay, x = 0, y = 0, factor = 1) {
