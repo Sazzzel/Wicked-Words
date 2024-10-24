@@ -120,55 +120,44 @@
 
         <!-- Modal Landscape Pop-up -->
 
-        <div id="landscapeModal">
-
-            <div id="rotate-modal" class="rotate-modal">
-                <div class="rotate-modal-content">
-                    <h2>Please Rotate Your Device Horizontally (Landscape) </h2>
-
-
-                    <div class="rotate-icon">🔄</div>
-                </div>
-            </div>
+        <div id="landscapeModal"  class="rotate-modal rotate-modal-content">
+            <h2>Please Rotate Your Device Horizontally (Landscape) </h2>
+            <div class="rotate-icon">🔄</div>
         </div>
 
 
 
 
-        <div id="gameOverModal" class="game-over-modal">
-            <div class="game-over-modal-content">
-                <h2>Game Over!</h2>
-
-
-                <p>You lost on the word: <span id="lostWord">
-
-
-
-                    </span></p>
-
-                <p>Your total score: <span id="score">
-
-
-
-                    </span></p>
-
-                <div class="modal-buttons">
-                    <button class="btn-retry">Retry</button>
-
-                    <button class="btn-homepage">
-
-                        <a href="index.html"> Return to Homepage </a>
-
-
-                    </button>
-                </div>
-            </div>
-        </div>
-
+       
 
 
 
     </main>
+    <div id="gameOverModal" class="game-over-modal">
+        <div class="game-over-modal-content">
+            <h2>Game Over!</h2>
+
+
+            <p>You lost on the word: <span id="lostWord">
+
+
+
+                </span></p>
+
+            <p>Your total score: <div id="score">0</div></p>
+
+            <div class="modal-buttons">
+                <button class="btn-retry">Retry</button>
+
+                <button class="btn-homepage">
+
+                    <a href="index.html"> Return to Homepage </a>
+
+
+                </button>
+            </div>
+        </div>
+    </div>
 
 
     <!-- How To play section-->
@@ -194,7 +183,7 @@
     </section>
 
      <div id="puzzle-style">
-        <div id="score">SCORE GOES HERE</div>
+
         <h1><div id="puzzle"> Solve this!</div></h1>
         <input type="text" id="answer" placeholder="Enter your answer here">
         <p>Solve the puzzle to cast the spell</p>
