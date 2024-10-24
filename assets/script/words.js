@@ -3,7 +3,6 @@ const words = [
   [
     "bat",
     "cat",
-    "boo",
     "web",
     "fog",
     "owl",
@@ -127,14 +126,19 @@ const words = [
 
 let level = 1;
 let puzzle = null;
-let gameType = "scramble";
+let gameType = '';
+
+
+
 
 function newWord(){
+    console.log(gameType);
     puzzle= words[Math.floor(level - 1)][Math.floor(Math.random() * words[Math.floor(level - 1)].length)];
-      let shuffle = puzzle;
+    let shuffle = puzzle;
     if(gameType === 'scramble'){
        shuffle =  puzzle.split('').sort(function(){return 0.5-Math.random()}).join('');
     }
+
 
   document.getElementById("Puzzle").innerHTML = shuffle;
 }
