@@ -1,19 +1,19 @@
     /* jshint esversion: 6 */
     import Sprite from './sprite.js';
     const castBubble = new Image();
-    castBubble.src = "../Wicked-Words//assets/images/castBubble.png";
+    castBubble.src = "../Wicked-Words/assets/images/castBubble.png";
     const lsModal = document.getElementById("landscapeModal");
     // HTML Score Holder
     // const SCORE_DIV = document.getElementById("score");
 
-    const witch = new Sprite("../Wicked-Words//assets/images/witchSprite.png", 58, 46, 2, 20, 0, 0, 2);
+    const witch = new Sprite("../Wicked-Words/assets/images/witchSprite.png", 58, 46, 2, 20, 0, 0, 2);
     witch.setPosition(1920 / 2, 1080 /2 );
 
-    let bat = new Sprite("../Wicked-Words//assets/images/batSprite.png", 32, 32, 4, 20, 0, 0, 2.8);
+    let bat = new Sprite("../Wicked-Words/assets/images/batSprite.png", 32, 32, 4, 20, 0, 0, 2.8);
     
-    let pumpkin = new Sprite("../Wicked-Words//assets/images/pumpkinSprite.png", 32, 64, 3, 20, 0, 0, 1.8);
+    let pumpkin = new Sprite("../Wicked-Words/assets/images/pumpkinSprite.png", 32, 64, 3, 20, 0, 0, 1.8);
 
-    let skeley = new Sprite("../Wicked-Words//assets/images/skeletonSprite.png", 92, 184, 3, 20, 0, 0, 0.7);
+    let skeley = new Sprite("../Wicked-Words/assets/images/skeletonSprite.png", 92, 184, 3, 20, 0, 0, 0.7);
 
     let canvas = document.getElementById('lests');
     let ctx = canvas.getContext('2d');
@@ -142,12 +142,13 @@
             }
         }
 
-        // update score
+        // update scoregit 
         
     
     });
+    document.querySelector('.modal-start-game').addEventListener('click' , play);
     gameLoop();
-   document.querySelector('.modal-start-game').addEventListener('click' , play);
+   
     
     
 

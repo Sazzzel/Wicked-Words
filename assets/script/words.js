@@ -136,7 +136,7 @@ let hardMode = document.querySelector('.btn-outline-danger');
 normalMode.addEventListener('click' , clickNormal);
 
   function clickNormal(){
-   gameType = "unscrambled";
+  gameType = "unscrambled";
   handleGameType();
   newWord();
 }
@@ -145,14 +145,12 @@ normalMode.addEventListener('click' , clickNormal);
 hardMode.addEventListener('click' , clickHard);
 
   function clickHard(){
-   gameType = "scramble";
+  gameType = "scramble";
   handleGameType();
   newWord();
 }
 
 function handleGameType(){
-
-
 
   return gameType;
 }
@@ -168,5 +166,5 @@ function newWord(){
     }
 
 
-  document.getElementById("Puzzle").innerHTML = shuffle;
+  document.getElementById("puzzle").innerHTML = shuffle;
 }
