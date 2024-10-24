@@ -4,15 +4,15 @@
     const lWordModal = document.getElementById("lostWord");
     const gameOverModal = document.getElementById("gameOverModal");
     gameOverModal.style.visibility = "hidden";
-    castBubble.src = "../assets/images/castBubble.png";
-    const witch = new Sprite("../assets/images/witchSprite.png", 58, 46, 2, 20, 0, 0, 2);
+    castBubble.src = "..Wicked/assets/images/castBubble.png";
+    const witch = new Sprite("../Wicked-Words/assets/images/witchSprite.png", 58, 46, 2, 20, 0, 0, 2);
     witch.setPosition((1920 / 2) -58, (1080 /2) - 46);
 
-    let bat = new Sprite("../assets/images/batSprite.png", 32, 32, 4, 20, 0, 0, 2.8);
+    let bat = new Sprite("../Wicked-Words/assets/images/batSprite.png", 32, 32, 4, 20, 0, 0, 2.8);
     
-    let pumpkin = new Sprite("../assets/images/pumpkinSprite.png", 32, 64, 3, 20, 0, 0, 1.8);
+    let pumpkin = new Sprite("../Wicked-Words/assets/images/pumpkinSprite.png", 32, 64, 3, 20, 0, 0, 1.8);
 
-    let skeley = new Sprite("../assets/images/skeletonSprite.png", 92, 184, 3, 20, 0, 0, 0.7);
+    let skeley = new Sprite("../Wicked-Words/assets/images/skeletonSprite.png", 92, 184, 3, 20, 0, 0, 0.7);
 
 
 
@@ -132,8 +132,8 @@
         requestAnimationFrame(gameLoop);
     }
 
-    const audio1 = new Audio("../assets/audio/Witch.mp3");
-    const audio2 = new Audio("../assets/audio/COAP.mp3");
+    const audio1 = new Audio("../Wicked-Words/assets/audio/Witch.mp3");
+    const audio2 = new Audio("../Wicked-Words/assets/audio/COAP.mp3");
 
     function play () {
         
@@ -177,7 +177,7 @@
             
         }
 
-        //update score
+        
         
     
     });
