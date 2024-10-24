@@ -117,6 +117,7 @@
     function play () {
         document.getElementById("footer").style.display = "none";
         document.getElementById("main").style.display = "none";
+        document.getElementById("how-to-play").style.display = "none";
         document.getElementById("header").style.display = "none";
         document.querySelector('.modal-backdrop').style.display = "none";
         document.querySelector('#puzzle').style.display = "block";
