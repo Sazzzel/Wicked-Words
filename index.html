@@ -39,7 +39,7 @@
 
     <main id="main">
         <div class="    hero">
-            <div class="   hero-bg"></div> <!-- Blurred background image -->
+            <!-- <div class="   hero-bg"></div> Blurred background image -->
 
             <div class="    hero-content">
 
@@ -92,7 +92,7 @@
                 </div>
             </div>
         </div>
-
+        <div id="landscapeModal"></div>
 
         <!-- How To play section-->
 
@@ -128,13 +128,10 @@
     </section>
 
 
-    <div id="puzzle" style="text-align: center; position:absolute; top:70%; left:45%;">
-        <div id="Puzzle">
+    <div id="puzzle">
+        
 
             <h1> Solve this! </h1>
-
-        </div>
-
 
         <input type="text" id="answer" placeholder="Enter your answer here">
         <br><br>
@@ -247,18 +244,6 @@
         });
     </script>
 
-    <script>
-        function checkOrientation() {
-            if (window.innerHeight > window.innerWidth) {
-                document.querySelector('.landscape-message').style.display = 'block';
-            } else {
-                document.querySelector('.landscape-message').style.display = 'none';
-            }
-        }
-
-        window.addEventListener('load', checkOrientation);
-        window.addEventListener('resize', checkOrientation);
-    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
