@@ -388,6 +388,12 @@ main {
 
 /* Modal backdrop */
 
+.modal-header {
+
+
+  background-color: #000000;
+  border-bottom: 2px solid #ff7518;
+}
 
 
 .modal-content {
@@ -397,12 +403,7 @@ main {
 
 }
 
-.modal-header {
 
-
-  background-color: #000000;
-  border-bottom: 2px solid #ff7518;
-}
 
 .modal-title {
 
@@ -430,7 +431,7 @@ main {
 }
 
 .close:hover {
-  color: rgb(216, 57, 17);
+  color: rgb(50, 216, 17);
 }
 
 
@@ -950,6 +951,124 @@ footer {
 
 
 }
+
+
+
+/*----------------------------------------------------------------------- Media query Landscape  orientation*/
+
+@media screen and (orientation:landscape) {
+
+
+  .logo {
+    margin: 0 auto;
+  }
+
+  /* Shows menu toggle on mobile */
+
+
+
+
+
+
+
+
+  /* ----------------------------------------------------------  main hero image */
+
+
+
+
+
+
+
+
+  /* puzzel dialogue box */
+
+  #puzzle-style {
+
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 70%;
+    left: 45%;
+
+    flex-wrap: wrap;
+
+  }
+
+  .puzzle-style-text {
+
+    text-shadow: 2px 2px 5px #8b0000;
+
+  }
+
+
+
+
+
+
+
+  .play-btn {
+    background-color: #ff7518;
+    color: #000000;
+    font-size: 2rem;
+    font-family: 'metal mania', cursive;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-shadow: 2px 2px 5px #8b0000;
+    border: 2px solid #000;
+
+    letter-spacing: 4px;
+
+    transition: background-color 0.3s ease;
+
+    z-index: 5;
+
+
+
+    position: absolute;
+
+    /* Adjust its position */
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+
+
+  }
+
+
+
+  #about-us {
+
+
+    width: 100%;
+    position: absolute;
+    bottom: 400px;
+    left: 0;
+
+  }
+
+
+
+  #click-us-text {
+
+
+    width: 100%;
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+
+  }
+
+
+
+}
+
+
+
+
+
 
 
 @media (max-width: 700px) {
