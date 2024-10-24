@@ -6,7 +6,7 @@
 
 
 
-![screenshot of Home page]()
+
 
 
 ---
@@ -193,22 +193,29 @@ The game will play after the game mode and level have been selected.
 </details> 
 
 
-## Tablet & Mobile View  
 
-### **Hero Image**
+## Deployment
 
- 
-### **Desktop, Tablet & Mobile Differences** 
- 
+GitHub was used to deploy the website. These were the steps taken to acheive this:
 
-
-### **Mobile View ** 
-
+1. Login to GitHub account.
+2. Navigate to the project repository, scoops_pp1.
+3. Click the Settings button near the top of the page.
+4. In the left-hand menu, find and click on the Pages button.
+5. In the Source section, choose 'main' from the drop-down, select branch menu.
+6. Select 'root' from the drop-down folder menu.
+7. Click 'Save' and after a few moments the project will have been made live and a link is visible at the top of the page.
 
 
 ## Future Features
 
+- Add a local leaderboard for the user to see their high scores and use cookies to ensure the information is still available when the user returns to the site.
 
+- Add further sprite characters for the enemies and increase the number of enemies that are shown.
+
+- Allow the user to choose from a range of backgrounds that would be displayed behind the game.
+
+- Include a wider variety of game modes to increase replayability.
 ---
 
 ### **Languages Used**   
@@ -225,6 +232,7 @@ The game will play after the game mode and level have been selected.
 * Git - used for version control.
 * GitPod - used as a workspace.
 * Visual Studio Code - Used to SSH into my GitPod workspace.
+* Bootstrap v5.3
 * Google Fonts - fonts were chose imported from here  
 * Cooler - for all color palettes and accessibility contrast ratios  
 * Hotpot AI - for favicon  
@@ -273,7 +281,7 @@ Ultra wide monitor - 34 Inch 3440x1440
 
 ## Credits  
 
-Bat spites - bagzie
+Bat sprites - bagzie
 https://opengameart.org/content/bat-sprite
 
 pumpkin Monster - Reemax
@@ -288,6 +296,9 @@ https://opengameart.org/content/parallax-halloween-2d-game-backgrounds
 
   
 ### **Content References**
+
+chatGPT for word lists -
+https://chatgpt.com/
 
 
 
