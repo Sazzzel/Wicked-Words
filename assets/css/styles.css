@@ -44,7 +44,11 @@ h1 {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 
+
+{
   font-family: "metal mania", system-ui;
   letter-spacing: 5px;
 
@@ -61,7 +65,7 @@ canvas {
   height: 100%;
   display: block;
   margin: 0 auto;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
 
   
   z-index: -10;
@@ -96,8 +100,10 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
   height: var(--header-height);
   display: flex;
+
   justify-content: space-between;
   align-items: center;
+  
   padding: 0 20px;
   position: fixed;
   top: 0;
@@ -226,33 +232,15 @@ main {
   position: relative;
   text-align: center;
   z-index: 2;
+
+  
 }
   
 
 
  
 
-
-.jumbotron {
-     
-background-color: #00000000;
-
-  background-image: url('../images/Footer.webp');
-  background-size: cover;  
-  background-position: center;  
-  background-attachment: fixed; /* Keep the background fixed during scrolling */
-  background-repeat: no-repeat;  
-  position: relative; 
-  
-  height: 100vh;
-  display: flex; 
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
-  text-align: center;
-  width: 100vw;  
-
-}
+ 
 
 /* Main hero image */
 .main-hero {
@@ -272,11 +260,11 @@ background-color: #00000000;
 
 /* Left hero image */
 .left-hero {
-  position: relative;
+  /* position: relative; */
 
 
-  bottom: 0;
-  left: 0;
+  /* bottom: 0;
+  left: 0; */
   max-width: 150px;
   z-index: 4;
   border-radius: 10px;
@@ -286,9 +274,9 @@ background-color: #00000000;
 /* Right hero image */
 .right-hero {
 
-  position: relative;
-  bottom: 0;
-  right: 0;
+  /* position: relative; */
+  /* bottom: 0;
+  right: 0; */
   max-width: 150px;
   z-index: 4;
 
@@ -357,14 +345,14 @@ background-color: #00000000;
 .modal-content {
   background-color: #000000;
   color: #f5f5f5;
-  border: 2px solid #ff7518;
+  border: 2px solid #ff7518; 
 
 }
 
 .modal-header {
 
 
-  background-color: #8b0000;
+  background-color: #000000;
   border-bottom: 2px solid #ff7518;
 }
 
@@ -422,6 +410,9 @@ background-color: #00000000;
   color: #fff;
 }
  
+
+
+
 .btn-game-hard:hover {
 
   background-color: #dc3545;
@@ -546,15 +537,31 @@ background-color: #00000000;
 
 /* ------------------------------------------------------------------------ Footer  */
 
-footer {
+#footer {
 
-  text-align: center;
+   
 
-  padding: 20px;
-  color: #f5f5f5;
-  text-shadow: 1px 1px 5px #ff7518;
-  background-color: #282828;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+  background-image: url('../images/The_four_horsemen_image_footer.webp');
+
+
+  background-size: cover;  
+  background-position: center;  
+
+
+  background-attachment: fixed; /* Keep the background fixed during scrolling */
+  background-repeat: no-repeat;  
+  position: relative;  
+  
+  padding: 40px 0;
+
+  height: 100vh;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;   
+  text-align: center;    
+  width: auto;   
+ 
 }
 
 
@@ -566,36 +573,61 @@ footer {
 
 }
 
+.footer-backdrop {
+
+  position: relative;
+  z-index: 2
+ 
+  content "";
+  position: absolute;      
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
 
-.jumbotron {
-     
-  background-color: #00000000;
+  /* Footer background image blur */
+  background-color: rgba(0, 0, 0, 0.75);
+ 
+
   
-    background-image: url('../images/Footer.webp');
-    background-size: cover;   
-    background-position: center; 
-    background-attachment: fixed; /* Keeps the background fixed during scrolling */
-    background-repeat: no-repeat;  
-    position: relative; 
+}
+ 
+  
+  
+#about-us {               
+
     
-    height: 100vh;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    text-align: center;
-    width: 100vw;  
+  width: 100%; 
+  position:  absolute;  
+  bottom: 510px;   
+  left: 0;    
   
-  }
+} 
 
 
+#click-us-text {
+ 
+
+
+
+  width: 100%; 
+  position:  absolute;  
+  bottom: 120px;     
+  left: 0;   
+
+ 
+}
 
 #social-media-icons {
 
   text-align: center;
 
-
+  width: 100%;
+  position:  absolute;  
+  bottom: 100px;  
+  left: 0;
+  
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
@@ -623,13 +655,25 @@ footer {
 
 
 
+.footer-bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
 
 .copyright-note {
 
+  color: white;
   text-align: left;
 
-  color: white;
 
+  
+  font-size: 14px;
 
 
 }
@@ -707,20 +751,7 @@ footer {
   /* ----------------------------------------------------------  main hero image */
  
 
-  .left-hero .right-hero {
-    max-width: 75px;
-
-    right: -30px;
-  }
-
-  .right-hero {
-
-    max-width: 75px;
-
-    right: -30px;
-
-
-  }
+ 
  
 
  
@@ -810,6 +841,20 @@ footer {
 
 }
 
+
+
+
+ 
+#click-us-text {
+
+
+  width: 100%; 
+  position:  absolute;  
+  bottom: 250px;    
+  left: 0;     
+  
+}
+
 }
 
 
@@ -835,6 +880,14 @@ footer {
 
   }
 
+#click-us-text {
 
+
+  width: 100%; 
+  position:  absolute;  
+  bottom: 120px;    
+  left: 0;     
+  
+}
 
 }
