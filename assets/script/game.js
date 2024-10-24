@@ -1,11 +1,8 @@
     /* jshint esversion: 6 */
     import Sprite from './sprite.js';
     const castBubble = new Image();
+    
     castBubble.src = "../Wicked-Words/assets/images/castBubble.png";
-    const lsModal = document.getElementById("landscapeModal");
-    // HTML Score Holder
-    // const SCORE_DIV = document.getElementById("score");
-
     const witch = new Sprite("../Wicked-Words/assets/images/witchSprite.png", 58, 46, 2, 20, 0, 0, 2);
     witch.setPosition(1920 / 2, 1080 /2 );
 
@@ -15,6 +12,13 @@
 
     let skeley = new Sprite("../Wicked-Words/assets/images/skeletonSprite.png", 92, 184, 3, 20, 0, 0, 0.7);
 
+
+
+    const lsModal = document.getElementById("landscapeModal");
+    // HTML Score Holder
+    // const SCORE_DIV = document.getElementById("score");
+
+    
     let canvas = document.getElementById('lests');
     let ctx = canvas.getContext('2d');
     let width = canvas.width;
@@ -97,6 +101,7 @@
         ctx.fillRect(0, 0, 1920, 1080);
         DrawBackdrop(ctx);
         if(isPlaying){
+            document.body.classList.remove('modal-open');
             moveMonsters();
             witch.update();
             witch.draw(ctx);
@@ -121,6 +126,7 @@
         document.getElementById("header").style.display = "none";
         document.querySelector('.modal-backdrop').style.display = "none";
         document.querySelector('#puzzle').style.display = "block";
+        document.querySelector('#puzzle-style').style.display = "block";
         document.getElementById("answer").focus();
         resetMonsters();
         isPlaying = true;
