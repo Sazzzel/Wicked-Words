@@ -11,6 +11,7 @@ backdrop.onload = function () {
     backdropReady = true;
 };
 
+
 backdrop.src = "../Wicked-Words/assets/images/graveBack.png";
 function DrawBackdrop(ctx){
     if(!backdropReady) return;
