@@ -3,9 +3,10 @@
     const castBubble = new Image();
     const lWordModal = document.getElementById("lostWord");
     const gameOverModal = document.getElementById("gameOverModal");
+
     castBubble.src = "../Wicked-Words/assets/images/castBubble.png";
     const witch = new Sprite("../Wicked-Words/assets/images/witchSprite.png", 58, 46, 2, 20, 0, 0, 2);
-    witch.setPosition(1920 / 2, 1080 /2 );
+    witch.setPosition((1920 / 2) -58, (1080 /2) - 46);
 
     let bat = new Sprite("../Wicked-Words/assets/images/batSprite.png", 32, 32, 4, 20, 0, 0, 2.8);
     
@@ -50,6 +51,9 @@
 
             let dir =  Math.abs(yVel)  > Math.abs(xVel) ? (yVel > 0 ? 0 : 2) : (xVel > 0 ? 1 : 3);
         
+            function pauseAudio() {
+                audio2.pause();
+            }
             
             monsters[i].yFrame = dir;
             monsters[i].x += xVel;
@@ -60,6 +64,7 @@
                 isPlaying = false;
                 gameOverModal.style.visibility = "Block";
                 resetMonsters();
+                pauseAudio();
                 lostWord = puzzle;
                 lWordModal.innerHTML = lostWord;
                 newWord();
@@ -121,10 +126,11 @@
         requestAnimationFrame(gameLoop);
     }
 
-    const audio1 = new Audio("../assets/audio/Witch.mp3");
-    const audio2 = new Audio("../assets/audio/COAP.mp3");
+    const audio1 = new Audio("../Wicked-Words/assets/audio/Witch.mp3");
+    const audio2 = new Audio("../Wicked-Words/assets/audio/COAP.mp3");
 
     function play () {
+        
         document.getElementById("footer").style.display = "none";
         document.getElementById("main").style.display = "none";
         document.getElementById("how-to-play").style.display = "none";
@@ -164,11 +170,12 @@
             }
         }
 
-        // update scoregit 
+        //update score
         
     
     });
     document.querySelector('.modal-start-game').addEventListener('click' , play);
+    document.querySelector('.btn-retry').addEventListener('click' , play);
     gameLoop();
    
     
