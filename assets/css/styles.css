@@ -47,8 +47,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
   font-family: "metal mania", system-ui;
   letter-spacing: 5px;
 
@@ -902,9 +901,10 @@ footer {
 
 .footer-note {
 
+
   color: white;
 
-  letter-spacing: 2px;
+  letter-spacing: 5px;
 
 }
 
@@ -1045,7 +1045,7 @@ footer {
 
     width: 100%;
     position: absolute;
-    bottom: 400px;
+    bottom: 370px;
     left: 0;
 
   }
@@ -1164,7 +1164,23 @@ footer {
 
 
 
+  #social-media-icons {
 
+    text-align: center;
+
+    width: 100%;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    gap: 7px;
+
+    flex-wrap: wrap;
+
+  }
 
 
   .play-btn {
@@ -1196,6 +1212,12 @@ footer {
 
 
   }
+
+
+
+
+
+
 
   #click-us-text {
 
@@ -1234,6 +1256,21 @@ footer {
 
   }
 
+
+
+
+  #about-us {
+
+
+    width: 100%;
+    position: absolute;
+    bottom: 600px;
+    left: 0;
+
+  }
+
+
+
   #click-us-text {
 
 
@@ -1242,6 +1279,10 @@ footer {
     bottom: 120px;
     left: 0;
 
+
+
   }
+
+
 
 }
