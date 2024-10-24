@@ -126,6 +126,7 @@
         document.getElementById("header").style.display = "none";
         document.querySelector('.modal-backdrop').style.display = "none";
         document.querySelector('#puzzle').style.display = "block";
+        document.querySelector('#puzzle-style').style.display = "block";
         document.getElementById("answer").focus();
         resetMonsters();
         isPlaying = true;

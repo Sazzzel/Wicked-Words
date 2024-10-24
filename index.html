@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
     <title>Wicked Words</title>
 
     <!-- Bootstrap -->
@@ -13,6 +16,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon-64x64.png">
+
 </head>
 
 <body>
@@ -38,27 +42,39 @@
 
 
     <main id="main">
+
+
+
         <div class="    hero">
-            <!-- <div class="   hero-bg"></div> Blurred background image -->
+            <div class="   hero-bg"></div> <!-- Blurred background image -->
 
-            <div class="    hero-content">
-
-
-                <!-- Left Hero Image -->
-                <img src="assets/images/hero-left-side.webp" class="left-hero" alt="Decorative Left Hero Image">
-
-                <!-- Right Hero Image -->
-                <img src="assets/images/hero-right-side.webp" class="right-hero" alt="Decorative Right Hero Image">
-
-
-
-            </div>
         </div>
 
         <!-- Modal Button -->
 
+
+
         <button type="button" class="btn btn-dark play-btn" id="play-btn" data-toggle="modal"
             data-target="#exampleModalCenter">Play Game</button>
+
+        <div class="  d-flex justify-content-between  hero-content">
+
+
+            <div>
+                <!-- Left Hero Image -->
+                <img src="assets/images/hero-left-side.webp" class="left-hero" alt="Decorative Left Hero Image">
+            </div>
+
+            <div>
+                <!-- Right Hero Image -->
+                <img src="assets/images/hero-right-side.webp" class="right-hero" alt="Decorative Right Hero Image">
+            </div>
+
+
+
+
+
+        </div>
 
 
         <!-- Modal Vertical Pop-up -->
@@ -92,13 +108,22 @@
                 </div>
             </div>
         </div>
-        <div id="landscapeModal"></div>
-
-        <!-- How To play section-->
 
 
 
 
+
+        <div id="landscapeModal">
+
+            <div id="rotate-modal" class="rotate-modal">
+                <div class="rotate-modal-content">
+                    <h2>Please Rotate Your Device Horizontally (Landscape) </h2>
+
+
+                    <div class="rotate-icon">🔄</div>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -107,6 +132,7 @@
 
 
     <!-- How To play section-->
+
     <section id="how-to-play" class="how-to-play-section">
         <h2>How to Play</h2>
         <div class="how-to-play-content">
@@ -116,7 +142,7 @@
                 <li>You'll be presented with a word puzzle to solve.</li>
                 <li>In Spooky Mode, the words are unscrambled. In Haunted Mode, the words are scrambled.</li>
                 <li>Type your answer in the input box provided.</li>
-                <li>Solve the puzzle to cast a spell and progress in the game.</li>
+                <li>Solve the puzzle to cast a spell, repelling the oncoming enemies and progressing in the game.</li>
             </ol>
             <h3>Tips</h3>
             <ul>
@@ -127,107 +153,126 @@
         </div>
     </section>
 
+     <div id="puzzle-style">
 
-    <div id="puzzle">
-        
-        <h1> Solve this! </h1>
+        <h1><div id="puzzle"> Solve this!</div></h1>
+        <input type="text" id="answer" placeholder="Enter your answer here">
+        <p>Solve the puzzle to cast the spell</p>
 
-        <input type="textbox" id="answer" placeholder="Enter your answer here">
-        <br><br>
-        <p class="puzzle-text">Solve & Type In The Puzzle Word To Cast A Spell</p>
     </div>
-   
 
 
     <footer id="footer">
 
+        <div class="footer-backdrop ">
 
 
-        <footer id="about-us">
             <!-- Footer content -->
 
-            <h2>About us</h2>
 
-            <br>
+            <div>
 
-            <h3>Click on the faces <br> (Github Links)</h3>
+                <div id="about-us">
+                    <h3>About us</h3>
 
+                    <br>
 
+                    <h1>The Four Horsemen</h1>
 
-
-
-
-            <ul id="social-media-icons">
-
-                <li class="footer-faces"><a href="https://github.com/Sazzzel" target="_blank" rel="noopener"
-                        aria-label="Visit our twitter page (opens in a new tab)"><img
-                            src="assets/images/Sazzzels_head.webp" alt="Sazzzel's head"></a>
-
-                    <p class="footer-note">
-
-                        <a href="https://github.com/Sazzzel"><strong>Sazzzel/Sarah</strong></a>
-
-                    </p>
-
-                </li>
-
-
-                <li class="footer-faces"><a href="https://github.com/Cosh66" target="_blank" rel="noopener"
-                        aria-label="Visit our youtube page (opens in a new tab)"> <img
-                            src="assets/images/Yvonnes_head.webp" alt="Yvonne's Head"></a>
-                    <p class="footer-note">
-
-                        <a href="https://github.com/Sazzzel"><strong>Yvonne </strong></a>
-
-
-                    </p>
-
-                </li>
-
-
-                <li class="footer-faces"><a href="https://github.com/m-dixon5" target="_blank" rel="noopener"
-                        aria-label="Visit our instagram page (opens in a new tab)"><img
-                            src="assets/images/Matts_Head.webp" alt="Matt's Head" style="height: 77px ;"></a>
-                    <p class="footer-note">
-                        <a href="https://github.com/Sazzzel"><strong>Matt </strong></a>
-
-
-                    </p>
-
-                </li>
-
-                <li class="footer-faces"><a href="https://github.com/Yazhmd" target="_blank" rel="noopener"
-                        aria-label="Visit our github page (opens in a new tab)"><img
-                            src="assets/images/Yazdans_Head.webp" alt="Yazdan Head" style="height: 79px ;"> </a>
-
-                    <p class="footer-note">
-
-                        <a href="https://github.com/Sazzzel"><strong> Yazdan</strong></a>
-
-
-
-                    </p>
-                </li>
-
-            </ul>
+                </div>
 
 
 
 
-        </footer>
+                <ul id="social-media-icons">
 
-        <p class="copyright-note">
+                    <div id="click-us-text">
 
-
-            <strong>© The Four Horsemen All
-                rights
-                reserved</strong>
+                        <h2>The Cavalry:</h2>
 
 
+                        <h5>Click on the faces <br> (Our Github Links)</h5>
 
-        </p>
+
+
+
+                    </div>
+
+                    <li class="footer-faces"><a href="https://github.com/Sazzzel" target="_blank" rel="noopener"
+                            aria-label="Visit our twitter page (opens in a new tab)"><img
+                                src="assets/images/Sazzzels_head.webp" alt="Sazzzel's head"></a>
+
+                        <p class="footer-note">
+
+                            <a href="https://github.com/Sazzzel"><strong>Sazzzel/Sarah</strong></a>
+
+                        </p>
+
+                    </li>
+
+
+                    <li class="footer-faces"><a href="https://github.com/Cosh66" target="_blank" rel="noopener"
+                            aria-label="Visit our youtube page (opens in a new tab)"> <img
+                                src="assets/images/Yvonnes_head.webp" alt="Yvonne's Head"></a>
+                        <p class="footer-note">
+
+                            <a href="https://github.com/Sazzzel"><strong>Yvonne </strong></a>
+
+
+                        </p>
+
+                    </li>
+
+
+                    <li class="footer-faces"><a href="https://github.com/m-dixon5" target="_blank" rel="noopener"
+                            aria-label="Visit our instagram page (opens in a new tab)"><img
+                                src="assets/images/Matts_Head.webp" alt="Matt's Head" style="height: 77px ;"></a>
+                        <p class="footer-note">
+                            <a href="https://github.com/Sazzzel"><strong>Matt </strong></a>
+
+
+                        </p>
+
+                    </li>
+
+                    <li class="footer-faces"><a href="https://github.com/Yazhmd" target="_blank" rel="noopener"
+                            aria-label="Visit our github page (opens in a new tab)"><img
+                                src="assets/images/Yazdans_Head.webp" alt="Yazdan Head" style="height: 79px ;"> </a>
+
+                        <p class="footer-note">
+
+                            <a href="https://github.com/Sazzzel"><strong> Yazdan</strong></a>
+
+
+
+                        </p>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+
+            <div class="footer-bottom">
+                <p class="copyright-note">
+
+
+                    <strong> &copy; 2024 The Four Horsemen All rights reserved.</strong>
+
+
+
+                </p>
+
+            </div>
 
     </footer>
+
+
+
+
+
 
 
 
@@ -242,6 +287,7 @@
             nav.classList.toggle('active');
         });
     </script>
+
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
