@@ -47,8 +47,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
   font-family: "metal mania", system-ui;
   letter-spacing: 5px;
 
@@ -199,6 +198,7 @@ main {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
+  
 }
 
 
@@ -215,7 +215,7 @@ main {
   transform: translate(-50%, -50%);
   text-align: center;
 
-  z-index: 8;/
+  z-index: 8;
 }
 
 .logo-title-main {
@@ -225,6 +225,7 @@ main {
   color: #ff6600;
   text-shadow: 2px 2px 10px #8b0000;
   letter-spacing: 5px;
+  
 }
 
 .logo-title-start {
@@ -533,12 +534,9 @@ main {
 /* ---------------------------------------------------------------------------------- Modal Landscape popup  */
 
 
-.rotate-modal {
-  display: none;
-
-
-  position: fixed;
-  z-index: 20;
+#rotate-modal {
+  position: absolute;
+  z-index: 500;
   left: 0;
   top: 0;
 
@@ -599,7 +597,7 @@ main {
 
 
 .game-over-modal {
-  display: none;
+
   position: fixed;
   z-index: 18;
   left: 0;
@@ -902,9 +900,10 @@ footer {
 
 .footer-note {
 
+
   color: white;
 
-  letter-spacing: 2px;
+  letter-spacing: 5px;
 
 }
 
@@ -1045,7 +1044,7 @@ footer {
 
     width: 100%;
     position: absolute;
-    bottom: 400px;
+    bottom: 370px;
     left: 0;
 
   }
@@ -1164,7 +1163,23 @@ footer {
 
 
 
+  #social-media-icons {
 
+    text-align: center;
+
+    width: 100%;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    gap: 7px;
+
+    flex-wrap: wrap;
+
+  }
 
 
   .play-btn {
@@ -1196,6 +1211,12 @@ footer {
 
 
   }
+
+
+
+
+
+
 
   #click-us-text {
 
@@ -1234,6 +1255,21 @@ footer {
 
   }
 
+
+
+
+  #about-us {
+
+
+    width: 100%;
+    position: absolute;
+    bottom: 600px;
+    left: 0;
+
+  }
+
+
+
   #click-us-text {
 
 
@@ -1242,6 +1278,10 @@ footer {
     bottom: 120px;
     left: 0;
 
+
+
   }
+
+
 
 }
